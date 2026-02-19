@@ -1327,6 +1327,260 @@
         notes: [
         ]
       },
+      {
+        id: 26,
+        title: "Von Neumann Architecture",
+
+        description: "<b>Von Neumann Architecture</b> is a computer design model proposed by John Von Neumann in 1945. It is based on the <b>Stored Program Concept</b>, where both data and instructions are stored in the same memory.",
+
+        sections: [
+          {
+            heading: "Main Components",
+            points: [
+              "<b>1️⃣ Input Unit:</b> Accepts data and instructions from the user.",
+              "<b>2️⃣ Memory Unit:</b> Stores both data and programs in the same memory.",
+              "<b>3️⃣ Central Processing Unit (CPU):</b>",
+              "• <b>ALU (Arithmetic Logic Unit):</b> Performs arithmetic and logical operations.",
+              "• <b>Control Unit (CU):</b> Controls and coordinates system operations.",
+              "• <b>Registers:</b> Provide temporary high-speed storage.",
+              "<b>4️⃣ Output Unit:</b> Displays processed results."
+            ]
+          },
+          {
+            heading: "System Connection",
+            points: [
+              "All components are connected through a <b>single bus system</b>.",
+              "The same bus is used for both data and instructions."
+            ]
+          },
+          {
+            heading: "Significance",
+            points: [
+              "Introduced the <b>stored-program concept</b>.",
+              "Simplified computer system design.",
+              "Forms the foundation of modern computer systems.",
+              "Enables automatic execution of instructions."
+            ]
+          },
+          {
+            heading: "Diagram Representation (Draw in Exam)",
+            description: "Input →<br>    ↓<br>  Memory ↔ CPU → Output"
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 27,
+        title: "RAM and ROM with Explanation of Volatility",
+
+        description: "<b>Primary Memory</b> is the main memory of a computer that is directly accessed by the CPU. It includes RAM and ROM.",
+
+        sections: [
+          {
+            heading: "RAM (Random Access Memory)",
+            points: [
+              "A primary memory used to store data and instructions temporarily.",
+              "Directly accessed by the CPU during processing.",
+              "<b>Volatile in nature</b> (data is lost when power is turned off).",
+              "<b>Types:</b> SRAM (Static RAM) and DRAM (Dynamic RAM)."
+            ]
+          },
+          {
+            heading: "ROM (Read Only Memory)",
+            points: [
+              "A primary memory used to store permanent instructions.",
+              "<b>Non-volatile in nature</b> (retains data even when power is off).",
+              "Used to store BIOS and firmware.",
+              "<b>Types:</b> PROM, EPROM, EEPROM."
+            ]
+          },
+          {
+            heading: "Why RAM is Volatile?",
+            points: [
+              "RAM loses all stored data when the power supply is turned off.",
+              "It stores data temporarily during program execution.",
+              "Therefore, it is called <b>volatile memory</b>."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 28,
+        title: "Cache Memory and Its Role in CPU Performance",
+
+        description: "<b>Cache memory</b> is a small, fast, and expensive type of memory that acts as a high-speed buffer between the CPU and main memory.",
+
+        sections: [
+          {
+            heading: "Levels of Cache",
+            points: [
+              "<b>L1 Cache:</b> Smallest and fastest, integrated on CPU; first point of data retrieval.",
+              "<b>L2 Cache:</b> Larger and slightly slower; bridges L1 and main memory.",
+              "<b>L3 Cache:</b> Largest and slowest; shared among cores; acts as last-level cache."
+            ]
+          },
+          {
+            heading: "How Cache Improves CPU Performance",
+            points: [
+              "Stores frequently used data and instructions for faster CPU access.",
+              "Allows the CPU to retrieve data quickly instead of waiting for slower main memory.",
+              "Reduces processing delays, thereby improving overall CPU performance."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 29,
+        title: "Types of Computer Buses (System Bus)",
+
+        description: "<b>System Bus</b> is the communication pathway connecting CPU, memory, and I/O devices. It consists of three main types of buses.",
+
+        sections: [
+          {
+            heading: "Data Bus",
+            points: [
+              "Function: Transfers actual <b>data</b> between the processor, memory, and I/O devices.",
+              "Direction: <b>Bidirectional</b> – data can be sent and received.",
+              "Performance: Bus <b>width</b> determines data transfer capacity (e.g., 64-bit bus moves 8 bytes at once)."
+            ]
+          },
+          {
+            heading: "Address Bus",
+            points: [
+              "Function: Carries the physical <b>address</b> of memory locations or I/O ports the CPU wants to access.",
+              "Direction: <b>Unidirectional</b> – addresses flow from CPU to other components.",
+              "Capacity: A 32-bit address bus can access <b>2^32 (4 GB)</b> unique memory locations."
+            ]
+          },
+          {
+            heading: "Control Bus",
+            points: [
+              "Function: Carries <b>commands</b> and <b>synchronization signals</b> to coordinate system activities.",
+              "Direction: Generally <b>bidirectional</b> (individual lines may be unidirectional).",
+              "Signals: Includes <b>Read/Write commands</b>, <b>Clock signals</b>, and <b>Interrupt requests</b>."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 30,
+        title: "Define Software and Explain Its Need in a Computer System (4 Marks)",
+
+        description: "<b>Software</b> is a set of programs, data, and instructions that tells the computer hardware what to do. It acts as an interface between the user and the computer hardware.",
+
+        sections: [
+          {
+            heading: "Classification of Software",
+            points: [
+              "<b>System Software:</b> Manages and controls hardware components (e.g., Operating Systems, Device Drivers).",
+              "<b>Application Software:</b> Performs specific tasks for users (e.g., MS Word, Web Browsers)."
+            ]
+          },
+          {
+            heading: "Need for Software",
+            points: [
+              "<b>Hardware Interface:</b> Hardware (CPU, RAM) cannot function independently; software provides the logic to control them.",
+              "<b>Translation:</b> Converts human-readable commands into machine-executable binary code.",
+              "<b>Resource Management:</b> Allocates and manages memory, processing power, and other resources efficiently.",
+              "<b>User Interaction:</b> Provides GUI/CLI platforms for easy interaction without requiring knowledge of machine language.",
+              "<b>Automation:</b> Enables complex and repetitive tasks to be performed quickly and accurately."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 31,
+        title: "Explain the Role of Device Drivers in a Computer System (4 Marks)",
+
+        description: "<b>Device Driver</b> is a specialized type of <b>System Software</b> that acts as an intermediary (translator) between the Operating System (OS) and a specific hardware device.",
+
+        sections: [
+          {
+            heading: "Role and Importance of Device Drivers",
+            points: [
+              "<b>Translation:</b> Converts general OS instructions (e.g., \"Print Document\") into device-specific signals that hardware can understand.",
+              "<b>Enabling Functionality (Abstraction):</b> Allows the OS to interact with hardware without knowing internal working details.",
+              "<b>Hardware Control:</b> Manages data flow and communication protocols specific to that device.",
+              "<b>Compatibility:</b> Ensures new hardware works with existing operating systems by providing a communication bridge."
+            ]
+          },
+          {
+            heading: "Examples",
+            points: [
+              "<b>Graphics Driver (e.g., NVIDIA/AMD):</b> Translates data into visual signals for the monitor.",
+              "<b>Printer Driver:</b> Converts document data into a printer-specific format.",
+              "<b>Audio Driver (e.g., Realtek):</b> Manages sound input and output through speakers and microphones."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 32,
+        title: "System Software and Its Types",
+
+        description: "<b>System Software</b> is a type of software that manages and controls computer hardware and system resources. It acts as a bridge between hardware and application software.",
+
+        sections: [
+          {
+            heading: "Types of System Software",
+            points: [
+              "<b>1️⃣ Operating System (OS):</b> Manages memory, processes, files, and devices.",
+              "Acts as an interface between the user and hardware.",
+              "Examples: Windows, Linux, macOS.",
+              "",
+              "<b>2️⃣ System Utilities:</b> Used for system maintenance and configuration.",
+              "Examples: Disk Cleanup, Disk Defragmenter.",
+              "",
+              "<b>3️⃣ Device Drivers:</b> Enable communication between the operating system and hardware devices.",
+              "Examples: Printer driver, Audio driver."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 33,
+        title: "Language Translators and Their Types",
+
+        description: "<b>Language Translators</b> are system software that convert programs written in high-level or assembly language into machine code so that the computer can execute them.",
+
+        sections: [
+          {
+            heading: "Types of Language Translators",
+            points: [
+              "<b>1️⃣ Compiler:</b>",
+              "• Translates the entire program at once.",
+              "• Generates object code after compilation.",
+              "• Errors are displayed after compilation.",
+              "• Compiled program executes faster.",
+              "• Example: C, C++.",
+              "",
+              "<b>2️⃣ Interpreter:</b>",
+              "• Translates and executes the program line-by-line.",
+              "• Stops execution when an error is found.",
+              "• Does not generate separate object code.",
+              "• Slower compared to a compiler.",
+              "• Example: Python, JavaScript.",
+              "",
+              "<b>3️⃣ Assembler:</b>",
+              "• Converts assembly language into machine code."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      ,
+
+
 
 
     ];
