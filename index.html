@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Digital Study Notes</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 50px;
+      background: linear-gradient(135deg, #e6f0ff, #f4f9ff);
+      line-height: 1.8;
+      color: #1b263b;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+      color: #0d3b66;
+    }
+
+    .top-bar {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      background: #1e6091;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #184e77;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 28px;
+      margin-bottom: 35px;
+      border-radius: 14px;
+      border-left: 6px solid #1e6091;
+      box-shadow: 0 8px 18px rgba(30, 96, 145, 0.15);
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #0d3b66;
+    }
+
+    h3 {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #1e6091;
+    }
+
+    h4 {
+      margin-top: 12px;
+      font-size: 16px;
+      color: #2a6f97;
+    }
+
+    ul {
+      margin-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    .notes-section {
+      margin-top: 22px;
+      padding: 18px;
+      background: #fef9e7;
+      border-left: 5px solid #f1c40f;
+      border-radius: 10px;
+    }
+
+    .notes-section h3 {
+      margin-top: 0;
+      color: #1e6091;
+    }
+
+    b {
+      color: #003566;
+    }
+
+    @media print {
+      .top-bar {
+        display: none;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Computer Science Study Notes</h1>
+
+  <div class="top-bar">
+    <button class="btn" onclick="window.print()">📄 Download as PDF</button>
+  </div>
+
+  <div id="questions-container"></div>
+
+  <script>
+
+    const questions = [
+      {
+        id: 3,
+        title: "What is Data Communication? What are the Main Components of Data Communication?",
+
+        description: "<b>Data Communication</b> is the exchange of data between two or more devices through a communication medium using predefined rules called <b>protocols</b>.",
+
+        sections: [
+          {
+            heading: "Main Components of Data Communication",
+            description: "For successful data communication, the following five components are required:",
+            subsections: [
+              {
+                subheading: "1.Sender",
+                description: "The <b>sender</b> is the device that sends the data. It initiates the communication process."
+              },
+              {
+                subheading: "2.Receiver",
+                description: "The <b>receiver</b> is the device that receives the transmitted data."
+              },
+              {
+                subheading: "3.Message",
+                description: "The <b>message</b> is the actual information (text, audio, video, etc.) that is being transmitted."
+              },
+              {
+                subheading: "4.Communication Medium",
+                description: "The <b>communication medium</b> is the physical or wireless path through which data travels from sender to receiver."
+              },
+              {
+                subheading: "5.Protocol",
+                description: "<b>Protocols</b> are the set of rules that govern data communication and ensure correct and reliable transmission of data."
+              }
+            ]
+          },
+          {
+            heading: "Diagram Representation",
+            description: "In exams, draw a simple block diagram showing: <b>Sender → Medium → Receiver</b>, and mention that communication is controlled by <b>Protocols</b>."
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 2,
+        title: "Explain Switching Techniques",
+
+        description: "<b>Switching Techniques</b> are methods used to transfer data from a source to a destination in a network.",
+
+        sections: [
+          {
+            heading: "Types of Switching Techniques",
+            description: "There are three main types of switching techniques used in computer networks:",
+            subsesections: []
+          },
+          {
+            heading: "Circuit Switching",
+            description: "In <b>Circuit Switching</b>, a dedicated communication path is established between the sender and receiver before data transfer begins. The path remains reserved until the communication ends.",
+            points: [
+              "Requires connection setup before transmission.",
+              "Dedicated path ensures consistent performance.",
+              "Example: <b>Telephone Network</b>."
+            ]
+          },
+          {
+            heading: "Packet Switching",
+            description: "In <b>Packet Switching</b>, data is divided into small packets and transmitted independently through different routes. The packets are reassembled at the destination.",
+            points: [
+              "No dedicated path is required.",
+              "Packets may take different routes.",
+              "Efficient use of network resources.",
+              "Example: <b>Internet</b>."
+            ]
+          },
+          {
+            heading: "Message Switching",
+            description: "In <b>Message Switching</b>, the entire message is sent from one node to another without establishing a dedicated path. Each node stores the message before forwarding it to the next node.",
+            points: [
+              "Store-and-forward technique.",
+              "No need for dedicated connection.",
+              "Suitable for non-real-time communication."
+            ]
+          },
+          {
+            heading: "Diagram Representation",
+            description: "In exams, draw simple diagrams to show: <b>Dedicated Path</b> (Circuit Switching), <b>Multiple Packet Routes</b> (Packet Switching), and <b>Store-and-Forward Nodes</b> (Message Switching)."
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 3,
+        title: "Explain Three Categories of Wired Transmission Media",
+
+        description: "<b>Wired Transmission Media</b> are communication channels that use physical cables to transmit data signals between devices.",
+
+        sections: [
+          {
+            heading: "Main Categories of Wired Transmission Media",
+            description: "There are three main categories of wired transmission media used in computer networks:"
+          },
+          {
+            heading: "Twisted Pair Cable",
+            description: "<b>Twisted Pair Cable</b> consists of two insulated copper wires twisted together to reduce interference.",
+            points: [
+              "Inexpensive and widely used.",
+              "Commonly used in <b>telephone lines</b> and <b>LANs</b>.",
+              "Suitable for short distances.",
+              "Affected by noise and electromagnetic interference."
+            ]
+          },
+          {
+            heading: "Coaxial Cable",
+            description: "<b>Coaxial Cable</b> contains a central copper conductor surrounded by insulation and a metallic shielding layer.",
+            points: [
+              "Supports higher frequency signals.",
+              "Used in <b>cable TV networks</b>.",
+              "Provides better protection from interference than twisted pair.",
+              "More durable and reliable than twisted pair."
+            ]
+          },
+          {
+            heading: "Fibre Optic Cable",
+            description: "<b>Fibre Optic Cable</b> consists of thin strands of glass or plastic that transmit data as pulses of light.",
+            points: [
+              "Works on the principle of <b>Total Internal Reflection</b>.",
+              "Provides very high bandwidth.",
+              "Suitable for long-distance communication.",
+              "Immune to electromagnetic interference."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 4,
+        title: "Write Short Notes on HTTP, Bandwidth, Bluetooth, DNS, and Data Transfer Rate",
+
+        description: "The following are short notes on important networking concepts used in data communication and computer networks.",
+
+        sections: [
+          {
+            heading: "HTTP (Hypertext Transfer Protocol)",
+            description: "<b>HTTP</b> stands for <b>Hypertext Transfer Protocol</b>.",
+            points: [
+              "It is an <b>application layer protocol</b> used for communication between web browsers and web servers.",
+              "It operates on <b>Port 80</b>.",
+              "It is a <b>stateless protocol</b>.",
+              "It is used to transfer web pages and other resources over the Internet."
+            ]
+          },
+          {
+            heading: "Bandwidth",
+            description: "<b>Bandwidth</b> is the maximum capacity of a communication channel to transmit data.",
+            points: [
+              "Measured in <b>Hertz (Hz)</b> in analog systems.",
+              "Measured in <b>bits per second (bps)</b> in digital systems.",
+              "Higher bandwidth allows more data to be transmitted per second.",
+              "It affects network speed and overall performance."
+            ]
+          },
+          {
+            heading: "Bluetooth",
+            description: "<b>Bluetooth</b> is a short-range wireless communication technology.",
+            points: [
+              "Uses <b>radio waves</b> (unguided media) for data transmission.",
+              "Used to create a <b>Personal Area Network (PAN)</b>.",
+              "Operates in the <b>2.4 GHz frequency band</b>.",
+              "Connects devices such as headphones, keyboards, and smartphones."
+            ]
+          },
+          {
+            heading: "DNS (Domain Name System)",
+            description: "<b>DNS</b> stands for <b>Domain Name System</b>.",
+            points: [
+              "It is an <b>application layer protocol</b>.",
+              "It operates on <b>Port 53</b>.",
+              "It translates <b>domain names into IP addresses</b>.",
+              "It enables users to access websites using human-readable names."
+            ]
+          },
+          {
+            heading: "Data Transfer Rate",
+            description: "<b>Data Transfer Rate</b> is the amount of data transmitted per unit time.",
+            points: [
+              "Measured in <b>bits per second (bps)</b>.",
+              "Higher bandwidth generally results in higher data transfer rate.",
+              "It determines the speed of data transmission in a network."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 5,
+        title: "Write Primary Components of a Computer System",
+
+        description: "A <b>computer system</b> is an electronic device that accepts input, processes it, and produces output.",
+
+        sections: [
+          {
+            heading: "Primary Components of a Computer System",
+            description: "The primary components of a computer system are as follows:"
+          },
+          {
+            heading: "Input Devices",
+            description: "<b>Input Devices</b> are used to enter data and instructions into the computer.",
+            points: [
+              "Used to provide data to the system.",
+              "Examples: <b>Keyboard</b>, <b>Mouse</b>, <b>Scanner</b>."
+            ]
+          },
+          {
+            heading: "Central Processing Unit (CPU)",
+            description: "The <b>Central Processing Unit (CPU)</b> is known as the <b>Brain of the Computer</b>.",
+            points: [
+              "Performs arithmetic and logical operations.",
+              "Controls all operations of the computer.",
+              "Consists of <b>ALU</b>, <b>Control Unit</b>, and <b>Registers</b>."
+            ]
+          },
+          {
+            heading: "Memory",
+            description: "<b>Memory</b> stores data and instructions required for processing.",
+            points: [
+              "Includes <b>Primary Memory</b> such as RAM and ROM.",
+              "Includes <b>Cache Memory</b>.",
+              "Used by the CPU during processing."
+            ]
+          },
+          {
+            heading: "Output Devices",
+            description: "<b>Output Devices</b> are used to display or produce the processed results.",
+            points: [
+              "Provide the final output to users.",
+              "Examples: <b>Monitor</b>, <b>Printer</b>, <b>Speaker</b>."
+            ]
+          },
+          {
+            heading: "Diagram Representation",
+            description: "In exams, draw a simple block diagram: <b>Input → CPU → Output</b> and show <b>Memory</b> connected to the CPU."
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 6,
+        title: "Functions of CPU and Its Main Components",
+
+        description: "<b>CPU (Central Processing Unit)</b> is the brain of the computer. It processes data and instructions and controls all operations of the system.",
+
+        sections: [
+          {
+            heading: "Functions of CPU",
+            points: [
+              "Performs <b>arithmetic</b> and <b>logical operations</b>.",
+              "Controls and coordinates all <b>hardware components</b>.",
+              "Executes instructions stored in <b>memory</b>.",
+              "Manages data flow between <b>input</b>, <b>output</b>, and <b>memory units</b>."
+            ]
+          },
+          {
+            heading: "Main Components of CPU",
+            description: "The CPU consists of the following main components:"
+          },
+          {
+            heading: "Registers",
+            description: "<b>Registers</b> are the fastest memory units inside the CPU.",
+            points: [
+              "Store temporary data and instructions.",
+              "Very small in size but extremely high speed.",
+              "Used during instruction execution."
+            ]
+          },
+          {
+            heading: "ALU (Arithmetic Logical Unit)",
+            description: "<b>ALU</b> performs calculations and logical comparisons.",
+            points: [
+              "Performs arithmetic operations (+, −, ×, ÷).",
+              "Performs logical operations (AND, OR, NOT).",
+              "Supports decision-making operations."
+            ]
+          },
+          {
+            heading: "Control Unit (CU)",
+            description: "<b>Control Unit (CU)</b> directs and coordinates all activities of the computer.",
+            points: [
+              "Sends control signals through the <b>control bus</b>.",
+              "Manages instruction execution.",
+              "Controls data movement between CPU, memory, and I/O devices."
+            ]
+          },
+          {
+            heading: "Diagram Representation",
+            description: "In exams, draw a simple block diagram showing <b>CPU</b> divided into <b>CU</b>, <b>ALU</b>, and <b>Registers</b> inside it."
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 7,
+        title: "What are Input Devices? Give Three Examples.",
+
+        description: "<b>Input Devices</b> are hardware components used to enter data and instructions into a computer system. They allow users to communicate with the computer.",
+
+        sections: [
+          {
+            heading: "Examples of Input Devices",
+            description: "Three common input devices are:"
+          },
+          {
+            heading: "Mouse",
+            description: "A <b>Mouse</b> is a pointing device used to control cursor movement on the screen.",
+            points: [
+              "Used to select, drag, and open files.",
+              "Provides input through <b>clicks</b> and <b>scrolling</b>."
+            ]
+          },
+          {
+            heading: "Keyboard",
+            description: "A <b>Keyboard</b> is used to enter text, numbers, and commands into the computer.",
+            points: [
+              "Contains <b>alphabetic keys</b>.",
+              "Contains <b>numeric keys</b>.",
+              "Includes <b>function keys</b> and special keys."
+            ]
+          },
+          {
+            heading: "Microphone",
+            description: "A <b>Microphone</b> is used to input voice or sound data.",
+            points: [
+              "Captures audio signals.",
+              "Converts sound waves into <b>digital signals</b>."
+            ]
+          },
+          {
+            heading: "Diagram Representation",
+            description: "In exams, draw small labeled sketches of a <b>Mouse</b>, <b>Keyboard</b>, and <b>Microphone</b>."
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 8,
+        title: "Explain Output Devices with Examples and Their Use",
+
+        description: "<b>Output Devices</b> are hardware components used to display or produce the processed results of a computer system. The output may be in the form of <b>text</b>, <b>images</b>, <b>audio</b>, or <b>printed documents</b>.",
+
+        sections: [
+          {
+            heading: "Examples of Output Devices",
+            description: "Some common output devices and their uses are:"
+          },
+          {
+            heading: "Monitor",
+            description: "A <b>Monitor</b> displays output in the form of text, graphics, and videos.",
+            points: [
+              "Provides <b>soft copy output</b>.",
+              "Used to visually display processed information."
+            ]
+          },
+          {
+            heading: "Printer",
+            description: "A <b>Printer</b> produces output on physical paper.",
+            points: [
+              "Provides <b>hard copy output</b>.",
+              "Used to print documents, images, and reports."
+            ]
+          },
+          {
+            heading: "Speaker",
+            description: "A <b>Speaker</b> produces audio output.",
+            points: [
+              "Converts <b>digital signals</b> into sound.",
+              "Used for music, alerts, and multimedia sound."
+            ]
+          },
+          {
+            heading: "Diagram Representation",
+            description: "In exams, draw small labeled sketches of <b>Monitor</b>, <b>Printer</b>, and <b>Speaker</b>."
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 9,
+        title: "How Has the Evolution of Computer Progressed According to the Timeline?",
+
+        description: "The <b>evolution of computers</b> refers to the development of computers from simple calculating devices to modern high-speed digital systems. It is generally divided into <b>five generations</b> based on the technology used.",
+
+        sections: [
+          {
+            heading: "First Generation (1940–1956) – Vacuum Tubes",
+            description: "The first generation computers used <b>Vacuum Tubes</b> for processing.",
+            points: [
+              "Very large in size.",
+              "High power consumption.",
+              "Generated excessive heat.",
+              "Example: <b>ENIAC</b>."
+            ]
+          },
+          {
+            heading: "Second Generation (1956–1963) – Transistors",
+            description: "The second generation computers used <b>Transistors</b> instead of vacuum tubes.",
+            points: [
+              "Smaller and more reliable.",
+              "Less heat generation.",
+              "Used <b>Assembly Language</b> and <b>High-Level Languages</b>.",
+              "Example: <b>IBM 1401</b>."
+            ]
+          },
+          {
+            heading: "Third Generation (1964–1971) – Integrated Circuits (ICs)",
+            description: "The third generation computers used <b>Integrated Circuits (ICs)</b>.",
+            points: [
+              "Faster and more efficient.",
+              "Reduced size and cost.",
+              "Supported <b>Operating Systems</b>."
+            ]
+          },
+          {
+            heading: "Fourth Generation (1971–Present) – Microprocessors",
+            description: "The fourth generation computers are based on <b>Microprocessors</b>.",
+            points: [
+              "Very high speed.",
+              "Personal computers introduced.",
+              "Example: <b>Intel 4004</b>."
+            ]
+          },
+          {
+            heading: "Fifth Generation (Present & Future) – Artificial Intelligence",
+            description: "The fifth generation is based on <b>Artificial Intelligence (AI)</b>.",
+            points: [
+              "Uses <b>Machine Learning</b> and <b>Natural Language Processing</b>.",
+              "Focus on smart and intelligent systems."
+            ]
+          },
+          {
+            heading: "Timeline Diagram Representation",
+            description: "In exams, draw a simple downward flow diagram showing: <b>Vacuum Tubes → Transistors → ICs → Microprocessor → AI Systems</b>."
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 10,
+        title: "What is Topology? Explain Bus and Star Topology with Diagram",
+
+        description: "<b>Network Topology</b> refers to the physical or logical arrangement of computers and devices in a network.",
+
+        sections: [
+          {
+            heading: "Bus Topology",
+            description: "In <b>Bus Topology</b>, all devices are connected to a single backbone cable.",
+            points: [
+              "Data travels in both directions along the backbone.",
+              "Requires <b>terminators</b> at both ends of the cable.",
+              "Easy to install and cost-effective.",
+              "Failure of the backbone cable stops the entire network."
+            ]
+          },
+          {
+            heading: "Bus Topology Diagram Representation",
+            description: "In exams, draw a straight line representing a <b>Single Backbone Cable</b> and connect multiple computers to it in a linear form."
+          },
+          {
+            heading: "Star Topology",
+            description: "In <b>Star Topology</b>, all devices are connected to a central device such as a <b>Hub</b> or <b>Switch</b>.",
+            points: [
+              "All data passes through the central device.",
+              "Easy to manage and troubleshoot.",
+              "Failure of one device does not affect others.",
+              "Failure of the central device stops the entire network."
+            ]
+          },
+          {
+            heading: "Star Topology Diagram Representation",
+            description: "In exams, draw a central <b>Hub/Switch</b> and connect all computers around it like a star shape."
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 11,
+        title: "What is Protocol and Data Communication? Explain with Example",
+
+        description: "Both <b>Protocol</b> and <b>Data Communication</b> are fundamental concepts in computer networking that enable devices to exchange information effectively.",
+
+        sections: [
+          {
+            heading: "Protocol",
+            description: "A <b>Protocol</b> is a set of rules that govern data communication between devices in a network.",
+            points: [
+              "Defines how data is formatted and transmitted.",
+              "Ensures reliable and secure communication.",
+              "Examples: <b>HTTP</b>, <b>FTP</b>, <b>TCP</b>, <b>IP</b>."
+            ]
+          },
+          {
+            heading: "Data Communication",
+            description: "<b>Data Communication</b> is the exchange of data between two or more devices through a transmission medium.",
+            points: [
+              "Requires a sender and receiver.",
+              "Data is transmitted through wired or wireless media.",
+              "Follows predefined communication rules (protocols)."
+            ]
+          },
+          {
+            heading: "Components of Data Communication",
+            points: [
+              "<b>Sender</b>",
+              "<b>Receiver</b>",
+              "<b>Message</b>",
+              "<b>Transmission Medium</b>",
+              "<b>Protocol</b>"
+            ]
+          },
+          {
+            heading: "Example of Data Communication",
+            description: "When a user opens a website:",
+            points: [
+              "The browser sends a request using the <b>HTTP protocol</b>.",
+              "Data is transmitted through the <b>Internet</b>.",
+              "The server responds by sending the requested <b>webpage data</b>."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 12,
+        title: "Explain Three Categories of Wired Transmission Media",
+
+        description: "<b>Wired Transmission Media</b> are physical cables used to transmit data signals between devices in a network.",
+
+        sections: [
+          {
+            heading: "Twisted Pair Cable",
+            description: "<b>Twisted Pair Cable</b> consists of two insulated copper wires twisted together to reduce interference.",
+            points: [
+              "Low cost and easy to install.",
+              "Commonly used in <b>telephone lines</b> and <b>LAN</b> networks.",
+              "Prone to electromagnetic interference.",
+              "Suitable for short-distance communication."
+            ]
+          },
+          {
+            heading: "Coaxial Cable",
+            description: "<b>Coaxial Cable</b> consists of a single copper core surrounded by insulation and shielding.",
+            points: [
+              "Provides better bandwidth than twisted pair.",
+              "Less prone to interference due to shielding.",
+              "Used in <b>cable TV networks</b> and broadband connections."
+            ]
+          },
+          {
+            heading: "Optical Fibre Cable",
+            description: "<b>Optical Fibre Cable</b> uses light signals for data transmission.",
+            points: [
+              "Provides very high speed and bandwidth.",
+              "Immune to electromagnetic interference.",
+              "Suitable for long-distance communication.",
+              "Used in internet backbone and telecommunication networks."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 13,
+        title: "Advantages and Disadvantages of Optical Fibre Cable",
+
+        description: "<b>Optical Fibre Cable</b> is a wired transmission medium that uses light signals for high-speed data communication.",
+
+        sections: [
+          {
+            heading: "Advantages of Optical Fibre Cable",
+            points: [
+              "Provides <b>very high bandwidth</b>.",
+              "Supports high <b>data transfer rate</b>.",
+              "Immune to <b>electromagnetic interference</b>.",
+              "Has low signal loss (<b>low attenuation</b>).",
+              "Offers secure transmission as data is difficult to tap."
+            ]
+          },
+          {
+            heading: "Disadvantages of Optical Fibre Cable",
+            points: [
+              "Expensive installation cost.",
+              "Cable is fragile and delicate.",
+              "Difficult to splice and maintain.",
+              "Requires skilled technicians for installation and repair."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 14,
+        title: "Explain Bus Topology. How is it Different from Bidirectional Ring Topology?",
+
+        description: "<b>Network Topology</b> defines the arrangement of devices in a network. Bus Topology and Bidirectional Ring Topology differ in structure and data flow mechanism.",
+
+        sections: [
+          {
+            heading: "Bus Topology",
+            description: "In <b>Bus Topology</b>, all devices are connected to a single backbone cable.",
+            points: [
+              "Data travels in both directions along the backbone.",
+              "Requires <b>terminators</b> at both ends of the cable.",
+              "Easy to install and cost-effective.",
+              "Failure of the backbone cable stops the entire network."
+            ]
+          },
+          {
+            heading: "Bus Topology Diagram Representation",
+            description: "In exams, draw multiple PCs connected in a straight line with a single <b>Backbone Cable</b>."
+          },
+          {
+            heading: "Bidirectional Ring Topology",
+            description: "In <b>Bidirectional Ring Topology</b>, devices are connected in a circular form.",
+            points: [
+              "Data travels in both <b>clockwise</b> and <b>anticlockwise</b> directions.",
+              "Provides better <b>fault tolerance</b> than unidirectional ring.",
+              "Commonly used in <b>FDDI networks</b>.",
+              "If one path fails, data can travel in the opposite direction."
+            ]
+          },
+          {
+            heading: "Bidirectional Ring Diagram Representation",
+            description: "In exams, draw devices connected in a circular loop with arrows showing data flow in both directions."
+          },
+          {
+            heading: "Difference Between Bus and Bidirectional Ring Topology",
+            points: [
+              "<b>Structure:</b> Bus uses a single backbone cable, whereas Ring uses a circular connection.",
+              "<b>Data Flow:</b> Bus sends data along the backbone; Ring sends data in circular paths.",
+              "<b>Fault Tolerance:</b> Bus fails completely if backbone breaks; Bidirectional Ring can reroute data.",
+              "<b>Installation:</b> Bus is simpler to install; Ring is comparatively complex."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 15,
+        title: "Explain Unguided Transmission Media with a Suitable Diagram",
+
+        description: "<b>Unguided Transmission Media</b> transport electromagnetic waves without using a physical conductor. The signals are broadcast through <b>free space</b>.",
+
+        sections: [
+          {
+            heading: "Types of Unguided Transmission Media",
+            description: "There are three main types of unguided transmission media:"
+          },
+          {
+            heading: "Radio Waves (3 KHz – 1 GHz)",
+            points: [
+              "<b>Propagation:</b> Omnidirectional (signals travel in all directions).",
+              "<b>Property:</b> Can penetrate solid objects such as walls.",
+              "<b>Applications:</b> AM/FM Radio, Cordless phones."
+            ]
+          },
+          {
+            heading: "Microwaves (1 GHz – 300 GHz)",
+            points: [
+              "<b>Propagation:</b> Unidirectional; requires <b>Line-of-Sight (LoS)</b> communication.",
+              "<b>Property:</b> Cannot penetrate obstacles; uses parabolic dish antennas.",
+              "<b>Applications:</b> Satellite communication, Mobile networks (4G/5G)."
+            ]
+          },
+          {
+            heading: "Infrared (300 GHz – 400 THz)",
+            points: [
+              "<b>Propagation:</b> Line-of-sight; very short range.",
+              "<b>Property:</b> Cannot pass through walls (provides high security for indoor use).",
+              "<b>Applications:</b> TV Remotes, Wireless mouse and keyboard."
+            ]
+          },
+          {
+            heading: "Diagram Representation",
+            description: "In exams, draw simple diagrams showing: <b>Radio Waves (Omnidirectional signals)</b>, <b>Microwave Towers (Line-of-Sight)</b>, and <b>Infrared devices communicating in short range</b>."
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 16,
+        title: "Discuss Tree Topology, Its Applications, and Potential Limitations",
+
+        description: "<b>Tree Topology</b> is a hierarchical and hybrid network topology where nodes are arranged in a branching structure. It integrates multiple <b>Star Topologies</b> onto a central <b>Bus Backbone</b>.",
+
+        sections: [
+          {
+            heading: "Structure of Tree Topology",
+            points: [
+              "Organized in a hierarchical (parent-child) structure.",
+              "Combines characteristics of <b>Bus</b> and <b>Star</b> topology.",
+              "Data flows from the root node to intermediate nodes and then to leaf nodes."
+            ]
+          },
+          {
+            heading: "Applications of Tree Topology",
+            points: [
+              "<b>Scalable Networks:</b> Suitable where the network needs to grow by adding new branches.",
+              "<b>WAN Implementations:</b> Ideal for connecting multiple buildings in a campus or different LANs within a city.",
+              "<b>Corporate Hierarchy:</b> Reflects organizational structures where data flows from a central server to departments and then to individuals."
+            ]
+          },
+          {
+            heading: "Potential Limitations of Tree Topology",
+            points: [
+              "<b>Root Dependency:</b> Failure of the central root node (main hub/switch) can cause total network failure.",
+              "<b>Complexity:</b> Installation and maintenance are more difficult compared to Bus or Star topology.",
+              "<b>Cost:</b> Requires more cabling and multiple networking devices, increasing overall cost."
+            ]
+          },
+          {
+            heading: "Diagram Representation",
+            description: "In exams, draw a hierarchical branching structure with a <b>Root Node</b> at the top, connected to intermediate hubs/switches, which further connect to multiple computers."
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 17,
+        title: "Explain the Advantages and Drawbacks of Guided Transmission Media",
+
+        description: "<b>Guided Media</b>, also known as <b>Bound Media</b>, consists of physical paths (wires or cables) that direct electromagnetic waves from source to destination.",
+
+        sections: [
+          {
+            heading: "Advantages of Guided Transmission Media",
+            points: [
+              "<b>High Reliability:</b> Physical connections are less prone to environmental interference compared to wireless media.",
+              "<b>Higher Bandwidth:</b> Media like <b>Fiber Optic Cable</b> offer extremely high data transfer rates (up to several Gbps).",
+              "<b>Security:</b> Data is confined within the cable, making unauthorized interception more difficult.",
+              "<b>Cost-Effective (Short Range):</b> <b>Twisted Pair Cables</b> provide an inexpensive solution for building LANs."
+            ]
+          },
+          {
+            heading: "Disadvantages of Guided Transmission Media",
+            points: [
+              "<b>Installation Complexity:</b> Laying physical cables across long distances or difficult terrain is labor-intensive and expensive.",
+              "<b>Lack of Portability:</b> Devices are physically connected and cannot be easily moved after installation.",
+              "<b>Attenuation:</b> Signal strength decreases over distance, requiring <b>Repeaters</b>.",
+              "<b>Physical Vulnerability:</b> Cables can be damaged due to weather, construction work, or accidents."
+            ]
+          },
+          {
+            heading: "Diagram Representation",
+            description: "In exams, draw simple examples of <b>Twisted Pair</b>, <b>Coaxial Cable</b>, and <b>Fiber Optic Cable</b> to represent guided media."
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 18,
+        title: "What is FTP and What is Its Use?",
+
+        description: "<b>FTP (File Transfer Protocol)</b> is a standard Internet protocol used for the reliable transfer of files between a client and a server over a computer network.",
+
+        sections: [
+          {
+            heading: "Architecture",
+            points: [
+              "<b>Client-Server Model:</b> FTP follows a client-server architecture where the client requests files and the server responds."
+            ]
+          },
+          {
+            heading: "OSI Layer & Ports",
+            points: [
+              "<b>Application Layer:</b> FTP operates at the Application Layer of the OSI model.",
+              "<b>Port 21:</b> Used for control commands and establishing connection.",
+              "<b>Port 20:</b> Used for actual data transfer."
+            ]
+          },
+          {
+            heading: "Modes of Operation",
+            points: [
+              "<b>Active Mode:</b> The server initiates the data connection to the client.",
+              "<b>Passive Mode:</b> The client initiates both control and data connections."
+            ]
+          },
+          {
+            heading: "Uses of FTP",
+            points: [
+              "Uploading website files to a web server.",
+              "Downloading files from remote servers.",
+              "Transferring large files over a network.",
+              "Backing up and sharing data between systems."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 19,
+        title: "What is GSM? Its Uses and Examples",
+
+        description: "<b>GSM (Global System for Mobile Communications)</b> is a world-standard digital cellular technology used for transmitting mobile voice and data services.",
+
+        sections: [
+          {
+            heading: "Generation",
+            points: [
+              "<b>2G Technology:</b> GSM is considered a second-generation (2G) mobile communication technology."
+            ]
+          },
+          {
+            heading: "Key Components",
+            points: [
+              "<b>SIM (Subscriber Identity Module):</b> Identifies and authenticates subscribers on the mobile network.",
+              "<b>Circuit Switching:</b> Uses a dedicated communication channel for the entire duration of a voice call."
+            ]
+          },
+          {
+            heading: "Features",
+            points: [
+              "Supports <b>SMS (Short Message Service)</b>.",
+              "Provides international roaming.",
+              "Offers basic data transfer services."
+            ]
+          },
+          {
+            heading: "Uses of GSM",
+            points: [
+              "Mobile voice communication.",
+              "Sending and receiving SMS messages.",
+              "Basic mobile internet (2G data services).",
+              "Machine-to-Machine (M2M) communication."
+            ]
+          },
+          {
+            heading: "Examples",
+            points: [
+              "Traditional cellular mobile phones.",
+              "Early 2G-enabled IoT devices."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 20,
+        title: "What is GPRS? Its Uses and Examples",
+
+        description: "<b>GPRS (General Packet Radio Service)</b> is a non-voice, high-speed data service that enhances the GSM network. It is commonly referred to as <b>2.5G technology</b>.",
+
+        sections: [
+          {
+            heading: "Switching Technology",
+            points: [
+              "<b>Packet Switching:</b> Unlike GSM voice calls that use circuit switching, GPRS uses packet switching.",
+              "Data is divided into small packets and transmitted efficiently over the network."
+            ]
+          },
+          {
+            heading: "Network Integration",
+            points: [
+              "Works over existing GSM networks.",
+              "Provides \"always-on\" internet connectivity.",
+              "Supports services like web browsing and MMS."
+            ]
+          },
+          {
+            heading: "Uses of GPRS",
+            points: [
+              "Mobile internet access.",
+              "E-mail services on mobile devices.",
+              "Multimedia Messaging Service (MMS).",
+              "Machine-to-Machine (M2M) communication in IoT devices."
+            ]
+          },
+          {
+            heading: "Examples",
+            points: [
+              "Early internet-enabled mobile phones.",
+              "GPS tracking devices using 2.5G networks.",
+              "Basic IoT devices using GSM/GPRS modules."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 21,
+        title: "What is WLL? Its Uses and Examples",
+
+        description: "<b>WLL (Wireless Local Loop)</b> is a system that connects subscribers to the local telephone exchange using wireless radio signals instead of traditional copper wires.",
+
+        sections: [
+          {
+            heading: "Purpose",
+            points: [
+              "Provides <b>last-mile connectivity</b> between the service provider and the user.",
+              "Especially useful in rural or remote areas where laying cables is costly or difficult."
+            ]
+          },
+          {
+            heading: "Technology Used",
+            points: [
+              "Uses wireless technologies such as <b>CDMA</b> and <b>TDMA</b>.",
+              "Connects fixed users to the <b>Public Switched Telephone Network (PSTN)</b>."
+            ]
+          },
+          {
+            heading: "Key Characteristics",
+            points: [
+              "<b>Limited Mobility:</b> The terminal is usually fixed at a specific location.",
+              "<b>Cost-Effective:</b> Lower installation and maintenance cost compared to wired local loops."
+            ]
+          },
+          {
+            heading: "Uses of WLL",
+            points: [
+              "Providing telephone services in rural areas.",
+              "Connecting remote villages to telecom networks.",
+              "Temporary communication setups in developing regions."
+            ]
+          },
+          {
+            heading: "Examples",
+            points: [
+              "Fixed wireless phones in rural telephony systems.",
+              "Wireless subscriber units installed in remote homes."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 22,
+        title: "What is a Domain Name? Explain with Examples",
+
+        description: "<b>Domain Name</b> is a unique, human-readable alphanumeric address used to identify a website on the Internet.",
+
+        sections: [
+          {
+            heading: "IP Address Translation",
+            points: [
+              "A domain name acts as an alias for a complex numerical <b>IP Address</b>.",
+              "The <b>DNS (Domain Name System)</b> translates domain names into IP addresses that computers understand."
+            ]
+          },
+          {
+            heading: "Structure of a Domain Name",
+            points: [
+              "<b>SLD (Second-Level Domain):</b> The unique name of the website (e.g., \"google\").",
+              "<b>TLD (Top-Level Domain):</b> The extension indicating type or location (e.g., \".com\", \".org\", \".in\").",
+              "Domain names may also include subdomains (e.g., \"www\")."
+            ]
+          },
+          {
+            heading: "Registration",
+            points: [
+              "Domain names are managed by authorized <b>Registrars</b>.",
+              "Each domain name must be unique across the entire Internet."
+            ]
+          },
+          {
+            heading: "Importance",
+            points: [
+              "Makes websites easy to access using memorable names.",
+              "Eliminates the need to remember complex numerical IP addresses."
+            ]
+          },
+          {
+            heading: "Examples",
+            points: [
+              "<b>Commercial:</b> amazon.com",
+              "<b>Educational:</b> mit.edu",
+              "<b>Government:</b> india.gov.in"
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 23,
+        title: "Explain TCP/IP Model and Its Importance",
+
+        description: "<b>TCP/IP (Transmission Control Protocol/Internet Protocol)</b> is a suite of communication protocols used to interconnect network devices on the Internet.",
+
+        sections: [
+          {
+            heading: "Four Layers of TCP/IP Model",
+            points: [
+              "<b>1. Application Layer:</b> Provides network services to applications (Protocols: HTTP, FTP, SMTP).",
+              "<b>2. Transport Layer:</b> Responsible for end-to-end communication and error recovery (Protocols: TCP, UDP).",
+              "<b>3. Internet Layer:</b> Handles routing of packets across networks (Protocol: IP).",
+              "<b>4. Network Access Layer:</b> Defines how data is physically transmitted through network media."
+            ]
+          },
+          {
+            heading: "Importance of TCP/IP Model",
+            points: [
+              "<b>Interoperability:</b> Enables different operating systems (Windows, Mac, Linux) and hardware devices to communicate.",
+              "<b>Reliability:</b> TCP ensures accurate data delivery using sequencing, acknowledgments, and error control.",
+              "<b>Scalability:</b> Forms the foundation of the global Internet, allowing it to expand efficiently.",
+              "<b>Standardization:</b> Provides a universal framework for global communication."
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "When browsing a website, the <b>Application Layer</b> uses HTTP.",
+              "The <b>Transport Layer</b> uses TCP to ensure reliable data delivery."
+            ]
+          }
+        ],
+
+        notes: []
+      }
+      , {
+        id: 24,
+        title: "Explain the Primary Components of a Computer System",
+
+        description: "A <b>computer</b> is an electronic device that accepts data as input, processes it, and produces meaningful output.",
+
+        sections: [
+          {
+            heading: "1️⃣ Input Unit",
+            points: [
+              "Accepts data and instructions from the user.",
+              "Converts input data into machine-readable form.",
+              "<b>Examples:</b> Keyboard, Mouse, Scanner."
+            ]
+          },
+          {
+            heading: "2️⃣ Central Processing Unit (CPU)",
+            points: [
+              "Known as the <b>Brain of the Computer</b>.",
+              "Performs all processing operations.",
+              "<b>Components of CPU:</b>",
+              "• <b>Registers:</b> Fastest memory used for temporary storage.",
+              "• <b>ALU (Arithmetic Logic Unit):</b> Performs arithmetic and logical operations.",
+              "• <b>Control Unit:</b> Controls and coordinates all system activities."
+            ]
+          },
+          {
+            heading: "3️⃣ Memory Unit",
+            points: [
+              "Stores data, instructions, and intermediate results.",
+              "<b>Examples:</b> RAM, ROM."
+            ]
+          },
+          {
+            heading: "4️⃣ Output Unit",
+            points: [
+              "Displays or produces processed results to the user.",
+              "<b>Examples:</b> Monitor, Printer, Speaker."
+            ]
+          },
+          {
+            heading: "Diagram Representation",
+            description: "Input → CPU → Output<br>      ↑<br>     Memory"
+          }
+        ],
+
+        notes: []
+      }
+      ,
+      {
+        id: 25,
+        title: "Explain Output Devices with Examples and Their Use",
+
+        description: "<b>Output Devices</b> are hardware components used to display or produce the processed results of a computer system. The output may be in the form of text, images, audio, or printed documents.",
+
+        sections: [
+          {
+            heading: "1️⃣ Monitor",
+            points: [
+              "Displays output in the form of text, graphics, and videos.",
+              "Provides <b>soft copy output</b>.",
+              "Used for viewing documents, watching videos, and interacting with applications."
+            ]
+          },
+          {
+            heading: "2️⃣ Printer",
+            points: [
+              "Produces output on physical paper.",
+              "Provides <b>hard copy output</b>.",
+              "Used for printing documents, reports, and images."
+            ]
+          },
+          {
+            heading: "3️⃣ Speaker",
+            points: [
+              "Produces audio output.",
+              "Converts digital signals into sound.",
+              "Used for music, video audio, alerts, and voice communication."
+            ]
+          },
+          {
+            heading: "Diagram Representation (Optional)",
+            description: "Monitor  |  Printer  |  Speaker  (Draw and label each device)"
+          }
+        ],
+
+        notes: []
+      },
+
+      {
+        id: 1,
+        title: "Functions of CPU and Its Main Components",
+        description: "<b>CPU (Central Processing Unit)</b> is the brain of the computer. It processes data and controls all system operations.",
+
+        sections: [
+          {
+            heading: "Functions of CPU",
+            points: [
+              "Performs <b>arithmetic and logical operations</b>.",
+              "Controls and coordinates all <b>hardware components</b>.",
+              "Executes instructions stored in <b>memory</b>.",
+              "Manages data flow between <b>input, output and memory units</b>."
+            ]
+          },
+          {
+            heading: "Main Components of CPU",
+            subsections: [
+              {
+                subheading: "Registers",
+                points: [
+                  "Fastest memory inside CPU.",
+                  "Stores <b>temporary data and instructions</b>.",
+                  "Very small in size but <b>high speed</b>."
+                ]
+              },
+              {
+                subheading: "ALU (Arithmetic Logical Unit)",
+                points: [
+                  "Performs arithmetic operations (+, −, ×, ÷).",
+                  "Performs logical operations (AND, OR, NOT)."
+                ]
+              },
+              {
+                subheading: "Control Unit (CU)",
+                points: [
+                  "Directs and coordinates all activities.",
+                  "Sends control signals through control bus.",
+                  "Manages instruction execution."
+                ]
+              }
+            ]
+          }
+        ],
+
+        notes: []
+      },
+      {
+        id: 2,
+        title: "What are Input Devices? Give Three Examples",
+        description: "<b>Input devices</b> are hardware components used to provide data and instructions to the computer system.",
+
+        sections: [
+          {
+            heading: "Examples of Input Devices",
+            subsections: [
+              {
+                subheading: "Mouse",
+                points: [
+                  "Provides cursor movement on screen.",
+                  "Gives input through <b>clicks and movements</b>."
+                ]
+              },
+              {
+                subheading: "Keyboard",
+                points: [
+                  "Contains multiple keys.",
+                  "Each key press sends input to computer."
+                ]
+              },
+              {
+                subheading: "Microphone",
+                points: [
+                  "Used to give <b>sound input</b>.",
+                  "Transfers voice data to computer."
+                ]
+              }
+            ]
+          }
+        ],
+
+        notes: [
+        ]
+      },
+
+
+    ];
+
+
+    function renderQuestions() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questions.forEach((q, index) => {
+
+        const card = document.createElement("div");
+        card.className = "card";
+
+        let html = `
+      <h2>${index + 1}. ${q.title}</h2>
+      <p>${q.description || ""}</p>
+    `;
+
+        if (q.sections) {
+          q.sections.forEach(section => {
+
+            html += `<h3>${section.heading}</h3>`;
+
+            // Section Description (Paragraph Support)
+            if (section.description) {
+              html += `<p>${section.description}</p>`;
+            }
+
+            // Section Points (Bullet Support)
+            if (section.points && section.points.length > 0) {
+              html += `<ul>`;
+              section.points.forEach(point => {
+                html += `<li>${point}</li>`;
+              });
+              html += `</ul>`;
+            }
+
+            // Subsections Support
+            if (section.subsections) {
+              section.subsections.forEach(sub => {
+
+                html += `<h4>${sub.subheading}</h4>`;
+
+                // Subsection Description
+                if (sub.description) {
+                  html += `<p>${sub.description}</p>`;
+                }
+
+                // Subsection Points
+                if (sub.points && sub.points.length > 0) {
+                  html += `<ul>`;
+                  sub.points.forEach(point => {
+                    html += `<li>${point}</li>`;
+                  });
+                  html += `</ul>`;
+                }
+
+              });
+            }
+
+          });
+        }
+
+        // Notes Section
+
+        html += `
+        <div class="notes-section">
+          <h3>Exam Notes</h3>
+          <ul>
+      `;
+        q.notes.forEach(note => {
+          html += `<li>${note}</li>`;
+        });
+        html += `
+          </ul>
+        </div>
+      `;
+
+        card.innerHTML = html;
+        container.appendChild(card);
+
+      });
+    }
+
+    renderQuestions();
+
+  </script>
+
+</body>
+
+</html>
