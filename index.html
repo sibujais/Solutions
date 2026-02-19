@@ -1329,7 +1329,7 @@
       },
       {
         id: 26,
-        title: "Von Neumann Architecture",
+        title: "What is the Von Neumann architecture? Explain its significance.",
 
         description: "<b>Von Neumann Architecture</b> is a computer design model proposed by John Von Neumann in 1945. It is based on the <b>Stored Program Concept</b>, where both data and instructions are stored in the same memory.",
 
@@ -1368,10 +1368,17 @@
           }
         ],
 
-        notes: []
+        notes: [
+          "Stored Program Concept main idea hai jo maine nahi likha",
+          "Definition weak tha. Isme scientist ka name aur kab design Kiya aur kis concept pe based hai vo nahi likha",
+          " Concept ki priop knowledge nahi thi, apane se banaya tha",
+          " Memory not  explained,You only mentioned CPU and devices. Memory is central part of Von Neumann model.",
+          " Significance points bohat general the.technichal kuchh nahi tha isme",
+          " Diagram me bhi output device likhana bhul gaye the"
+        ]
       }, {
         id: 27,
-        title: "RAM and ROM with Explanation of Volatility",
+        title: "Define RAM and ROM. Why is RAM volatile? ",
 
         description: "<b>Primary Memory</b> is the main memory of a computer that is directly accessed by the CPU. It includes RAM and ROM.",
 
@@ -1404,7 +1411,11 @@
           }
         ],
 
-        notes: []
+        notes: [
+          "1.You wrote 'Dynamic ROM' instead of Dynamic RAM under the DRAM section.",
+          "2. Volatile likha but batay nahi ki kya hota hai.volatility\" in the technical sense: data is lost when power is disconnected.",
+          "3. Rom me ye point likha hi nahi ki ye sirf read only memory hoti hai"
+        ]
       }, {
         id: 28,
         title: "Cache Memory and Its Role in CPU Performance",
@@ -1430,10 +1441,14 @@
           }
         ],
 
-        notes: []
+        notes: [
+          " Technical Terms: For L1 cache, use the word \"On-chip\" and for L3 cache, mention it is often \"Shared\" among all CPU cores.",
+          "Mechanism: You missed two vital keywords: \"Locality of Reference\" (the principle why cache works) and \"Latency\" (mentioning that cache reduces it).",
+          "Missing Diagram:  CPU -> Cache -> RAM."
+        ]
       }, {
         id: 29,
-        title: "Types of Computer Buses (System Bus)",
+        title: " List three types of buses used for data transfer in a computer.",
 
         description: "<b>System Bus</b> is the communication pathway connecting CPU, memory, and I/O devices. It consists of three main types of buses.",
 
@@ -1464,7 +1479,11 @@
           }
         ],
 
-        notes: []
+        notes: [
+          "Data Bus Example Error: You wrote that a 16-bit data bus transfers 16 bytes. This is incorrect. A 16-bit bus transfers 2 bytes (16 \text{ bits} / 8 = 2 \text{ bytes}). This is a significant technical error.",
+          "Control Bus Details: While you mentioned it is bidirectional, you could be more specific by mentioning examples of signals like Read/Write or Interrupt signals.",
+          "Missing System Bus Concept: For a 4-mark answer, it is helpful to mention that these three together are known as the System Bus"
+        ]
       }
       , {
         id: 30,
@@ -1492,7 +1511,12 @@
           }
         ],
 
-        notes: []
+        notes: [
+          "Repetition: Your \"Functions\" section and \"Why it needed\" section repeat almost the same points (manage resources, interact with hardware).",
+          "Lack of Diagram: For a 4-mark question, a small block diagram showing the relationship between User ->Software -> Hardware is missing.",
+          "Technical Precision: You mentioned \"MS Windows, paint, word.\" Use the formal categories: System Software and Application Software."
+
+        ]
       }, {
         id: 31,
         title: "Explain the Role of Device Drivers in a Computer System (4 Marks)",
@@ -1519,11 +1543,17 @@
           }
         ],
 
-        notes: []
+        notes: [
+          " Grammar (The \"Software\" Rule): Again, \"softwares\" is incorrect. It should be \"Device drivers are system software.\"",
+          "Missed Opportunity for Abstraction: You didn't mention that drivers act as a translator or an abstraction layer between the Operating System and the Hardware. This is a key point for a 4-mark answer.",
+          "Formatting: The answer is a bit \"blocky.\" While you have a list for examples, the main definition is a dense paragraph",
+          "Keyword Injection: Use words like Intermediary, Translation, Hardware-Specific, and OS Kernel.",
+          "Visual Representation: A simple diagram would easily push this to a 4/4 answer: OS <-> Device Driver <-> Hardware Device"
+        ]
       }
       , {
         id: 32,
-        title: "System Software and Its Types",
+        title: "What is system software? List its types with examples. ",
 
         description: "<b>System Software</b> is a type of software that manages and controls computer hardware and system resources. It acts as a bridge between hardware and application software.",
 
@@ -1544,11 +1574,16 @@
           }
         ],
 
-        notes: []
+        notes: [
+          "Technical Keywords: Include the word \"Platform\". System software provides a platform for application software to run.",
+          "Formatting for Space: In a 4-mark question, use a small tree diagram for \"Types\" to save space and look more professional.",
+          "You are still using \"softwares.\" As a mentor, I must be firm: \"Software\" is always singular in technical writing"
+
+        ]
       }
       , {
         id: 33,
-        title: "Language Translators and Their Types",
+        title: "What are language translators? Describe the working of a compiler and interpreter.",
 
         description: "<b>Language Translators</b> are system software that convert programs written in high-level or assembly language into machine code so that the computer can execute them.",
 
@@ -1576,7 +1611,15 @@
           }
         ],
 
-        notes: []
+        notes: [
+          "Major concept error.You wrote: Interpreter is very fast.  This is incorrect. Compiler-generated programs execute faster.",
+          "Interpreter is slower because it translates line-by-line during execution. This mistake can reduce marks.",
+          "Grammar issues “language’s codes” → unnecessary apostrophe",
+          "“it convert” → should be it converts “machine understandable codes” → better: machine code",
+          "Working not clearly separated Question asks:",
+          "Describe the working of compiler and interpreter. You should write working steps clearly in a heading"
+
+        ]
       }
       ,
 
