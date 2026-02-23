@@ -2138,8 +2138,597 @@
           "Precision: For the fractional part, it is standard practice to continue until you reach 0 or identify a repeating pattern. While at least 3-4 times is a good rule of thumb, mention that it is an approximation if it doesn't terminate"
         ]
       },
+      {
+        id: 49,
+        title: "Define Problem Solving and List the Steps Involved (4 Marks)",
 
+        description: "Problem-solving is a systematic process used to find a solution to a specific task. In computer science, it involves translating a real-world problem into a set of instructions that a computer can execute.",
 
+        sections: [
+          {
+            heading: "Steps Involved in Problem Solving",
+            points: [
+              "<b>1. Problem Identification:</b> Clearly defining the scope and nature of the problem.",
+              "<b>2. Analysis:</b> Identifying required inputs, expected outputs, and constraints.",
+              "<b>3. Design (Algorithm & Flowchart):</b> Creating a logical step-by-step plan (algorithm) and representing it visually using a flowchart.",
+              "<b>4. Coding:</b> Writing the program in a high-level language such as Python or C++.",
+              "<b>5. Testing & Debugging:</b> Executing the program with sample data to detect and correct errors (bugs).",
+              "<b>6. Documentation & Maintenance:</b> Preparing user/technical documentation and updating the program when required."
+            ]
+          }
+        ],
+
+        notes: [
+          "Add one missing step (optional but better) Some textbooks include:",
+          "Identifying Input and Output OR Designing Flowchart Adding flowchart improves completeness. ",
+          "Missing Early Steps: Most TGT CS syllabi include Problem Identification as the very first step before analysis.",
+          "Algorithm vs. Flowchart: You mentioned algorithm development but missed Flowcharting, which is a vital visual step in problem-solving theory.",
+          "Documentation: You missed the final step—Documentation, which is crucial for the long-term maintenance of the solution",
+          "The 'Design' Phase: Group Algorithm and Flowcharting under a 'Design' phase.",
+          "Keyword Injection: Use terms like Efficiency, Modularity, and Scalability."
+        ]
+      },
+      {
+        id: 50,
+        title: "Algorithm and Characteristics of a Good Algorithm (4 Marks)",
+
+        description: "An algorithm is a finite sequence of well-defined, step-by-step instructions used to solve a specific problem or perform a task.",
+
+        sections: [
+          {
+            heading: "Basic Components Before Developing an Algorithm",
+            points: [
+              "<b>Input:</b> Data provided to the algorithm.",
+              "<b>Processing:</b> Logical steps or computations performed on the input.",
+              "<b>Output:</b> Result produced after processing."
+            ]
+          },
+          {
+            heading: "Characteristics of a Good Algorithm",
+            points: [
+              "<b>1. Finiteness:</b> The algorithm must terminate after a finite number of steps.",
+              "<b>2. Definiteness (Preciseness):</b> Each step should be clear and unambiguous.",
+              "<b>3. Input:</b> Should have zero or more clearly defined inputs.",
+              "<b>4. Output:</b> Must produce at least one output.",
+              "<b>5. Effectiveness:</b> Each step should be simple and executable within finite time.",
+              "<b>6. Efficiency:</b> Should be time-efficient and space-efficient."
+            ]
+          }
+        ],
+
+        notes: [
+          "Missing Characteristics: A standard 'good algorithm' list also includes Input (zero or more), Output (at least one), and Feasibility",
+          "Algorithm definition is weak ,use unambiguous steps."
+        ]
+      },
+      {
+        id: 51,
+        title: "Flowchart and Pseudocode (4 Marks)",
+
+        description: "A flowchart is a graphical representation of an algorithm using standard symbols to represent different steps and arrows to show the flow of control. Pseudocode is an informal, structured representation of an algorithm written in simple English-like statements without strict programming syntax.",
+
+        sections: [
+          {
+            heading: "Flowchart",
+            points: [
+              "<b>Definition:</b> Graphical representation of an algorithm using standard symbols.",
+              "<b>Purpose:</b> Helps visualize the logical flow of a program."
+            ]
+          },
+          {
+            heading: "Common Flowchart Symbols",
+            points: [
+              "<b>Oval:</b> Start/End",
+              "<b>Rectangle:</b> Process",
+              "<b>Parallelogram:</b> Input/Output",
+              "<b>Diamond:</b> Decision"
+            ]
+          },
+          {
+            heading: "Example – Addition of Two Numbers (Flowchart Logic)",
+            points: [
+              "Start",
+              "Input num1",
+              "Input num2",
+              "Sum = num1 + num2",
+              "Print Sum",
+              "End"
+            ]
+          },
+          {
+            heading: "Pseudocode",
+            points: [
+              "<b>Definition:</b> Informal, structured algorithm written in simple English-like language.",
+              "<b>Common Keywords:</b> INPUT, PRINT, IF, ELSE, WHILE."
+            ]
+          },
+          {
+            heading: "Example – Addition of Two Numbers (Pseudocode)",
+            points: [
+              "START",
+              "INPUT num1",
+              "INPUT num2",
+              "COMPUTE Sum = num1 + num2",
+              "PRINT Sum",
+              "END"
+            ]
+          }
+        ],
+
+        notes: [
+          "Flowchart definition can include keyword",
+          "Add: Standard symbols (Terminator, Process, Decision, Input/Output) Examiners like symbol names.",
+          "Instead of: non-formal language Better: informal structured language"
+        ]
+      },
+      {
+        id: 52,
+        title: "Sequence in Algorithm Design (4 Marks)",
+
+        description: "Sequence is a fundamental control structure in which instructions are executed linearly, one after another, in the exact order they are written.",
+
+        sections: [
+          {
+            heading: "Definition",
+            points: [
+              "Instructions are executed step-by-step in a fixed order.",
+              "No skipping or repetition of steps occurs."
+            ]
+          },
+          {
+            heading: "Example – Calculating Area of a Square",
+            points: [
+              "START",
+              "INPUT side length (s)",
+              "COMPUTE Area = s × s",
+              "PRINT Area",
+              "END"
+            ]
+          },
+          {
+            heading: "Importance of Order",
+            points: [
+              "The sequence must follow a logical order.",
+              "If computation is performed before input, it results in a logical error.",
+              "Correct order ensures accurate output."
+            ]
+          }
+        ],
+
+        notes: [
+          "Definition slightly incorrect.Sequence is one of the control structures in algorithm design. ",
+          "“Exception would be raised” is programming-specific In algorithm theory, better word: Incorrect output, Logical error",
+          " it uses \"if/else\" logic (age \\geq 18). A \"pure\" sequence example would be something like calculating the area of a square where one step always follows the next without any decision.",
+          "Terminology: While \"exception would be raised\" is okay, the more common exam term is \"Logical Error\".",
+          "Use the term \"Linear\": Mention that in a sequence, instructions are executed in a linear fashion, one after the other.",
+          "Diagramming: For a 4-mark question, a tiny 3-box vertical flowchart (Start \\rightarrow Step 1 \\rightarrow Step 2) would secure a perfect score."
+        ]
+      },
+      {
+        id: 53,
+        title: "Selection in Algorithm Design (4 Marks)",
+
+        description: "Selection is a control structure where a block of instructions is executed only when a specific Boolean condition is satisfied. It enables decision-making and non-linear execution in an algorithm.",
+
+        sections: [
+          {
+            heading: "Definition",
+            points: [
+              "Execution depends on a True/False condition.",
+              "Allows the program to choose between different paths."
+            ]
+          },
+          {
+            heading: "Key Features",
+            points: [
+              "<b>Decision Making:</b> Directs program flow based on condition evaluation.",
+              "<b>Common Constructs:</b> if, if-else, switch-case, if-elif (Python)."
+            ]
+          },
+          {
+            heading: "Example – Check Even or Odd",
+            points: [
+              "START",
+              "INPUT number",
+              "IF number % 2 == 0 THEN",
+              "    PRINT \"Even\"",
+              "ELSE",
+              "    PRINT \"Odd\"",
+              "END"
+            ]
+          }
+        ],
+
+        notes: [
+          "My answer was also great ",
+          "Remove programming-specific syntax from flowchartInstead of: num % 2 == 0",
+          "In exam flowchart, write: Is number divisible by 2? More conceptual, less coding."
+
+        ]
+      },
+      {
+        id: 54,
+        title: "Algorithm to Check Odd or Even Using Pseudocode (4 Marks)",
+
+        description: "This algorithm determines whether a given number is odd or even using a conditional (selection) structure and the modulo operator.",
+
+        sections: [
+          {
+            heading: "A. Pseudocode",
+            points: [
+              "START",
+              "INPUT number",
+              "IF (number % 2 == 0) THEN",
+              "    PRINT \"Even Number\"",
+              "ELSE",
+              "    PRINT \"Odd Number\"",
+              "END"
+            ]
+          },
+          {
+            heading: "Working Logic",
+            points: [
+              "The <b>Modulo Operator (%)</b> calculates the remainder after dividing the number by 2.",
+              "If the remainder is 0 → The number is <b>Even</b>.",
+              "If the remainder is 1 → The number is <b>Odd</b>."
+            ]
+          }
+        ],
+
+        notes: [
+          "Technical Keyword: Use the term \"Modulo Operator\" when explaining the % symbol in your description.",
+          "Space Management: If you are worried about the answer being too short, you can add a tiny Dry Run table. Show what happens when num = 4 (Even) and when num = 7 (Odd)."
+        ]
+      },
+      {
+        id: 55,
+        title: "Repetition (Iteration) in Algorithms (4 Marks)",
+
+        description: "Repetition, also called iteration, is a control structure in which a set of instructions is executed repeatedly until a specified condition is satisfied.",
+
+        sections: [
+          {
+            heading: "Definition",
+            points: [
+              "A block of steps is repeated multiple times.",
+              "Execution continues until a condition becomes false or the loop ends.",
+              "Implemented using loops such as <b>for</b> loop and <b>while</b> loop."
+            ]
+          },
+          {
+            heading: "Example – Print Numbers Divisible by 6 from a List",
+            points: [
+              "1️⃣ Take a list of numbers.",
+              "2️⃣ For each number in the list, check if it is divisible by 6.",
+              "3️⃣ If the condition is true, print the number.",
+              "4️⃣ Repeat the process for all elements in the list."
+            ]
+          },
+          {
+            heading: "Explanation",
+            points: [
+              "The checking step is repeated for every element in the list.",
+              "This repeated execution makes it an example of repetition (iteration)."
+            ]
+          }
+        ],
+
+        notes: [
+          "Keyword Injection: Use the terms \"Iteration,\" \"Loop body,\" and \"Termination condition.\"",
+          "Two Main Types: Briefly mention the two types of repetition:",
+          "Count-controlled: (e.g., for loop) where you know the number of times in advance.",
+          "Condition-controlled: (e.g., while loop) which repeats as long as a condition is met.",
+          "Visual Aid: A simple loop flowchart (where an arrow loops back to an earlier step) is the best way to earn full marks for this topic.",
+
+          "Definition needs precision Instead of: this incident is called repetition",
+          "Better:This control structure is called repetition (iteration).",
+
+          "Small conceptual refinement You wrote: repeats until condition is True",
+          "Correct version: Loop continues while condition is True or until condition becomes False.",
+
+          "python code is not required in descriptive exam In EMRS 4-mark question:",
+          "Algorithm + explanation is enough. Code is optional unless specifically asked."
+        ]
+      },
+      {
+        id: 56,
+        title: "Why is Algorithm Verification Important? (4 Marks)",
+
+        description: "Algorithm verification is the process of proving that an algorithm is correct, efficient, and reliable before it is implemented in code.",
+
+        sections: [
+          {
+            heading: "Importance of Algorithm Verification",
+            points: [
+              "<b>Ensures Correctness:</b> Confirms that the algorithm produces the expected output for all valid inputs.",
+              "<b>Resource Optimization:</b> Helps compare solutions based on Time Complexity (execution speed) and Space Complexity (memory usage).",
+              "<b>Cost Reduction:</b> Detecting errors at the algorithm stage is cheaper and easier than fixing them after coding.",
+              "<b>Reliability:</b> Ensures the algorithm is robust and can handle edge cases without failure."
+            ]
+          }
+        ],
+
+        notes: [
+          " Yaha pe importance me ham bulleted heading use kar sakate hai vo hi best hai.",
+
+          "Verification vs. Validation: In technical terms, Verification is checking if the algorithm meets specifications (Doing the thing right), while Validation is checking if it meets user needs (Doing the right thing).",
+
+          "Keyword Injection: Use the terms Correctness, Robustness, and Optimality.",
+          "Jab bhi 2 methods vala ho aur compare ya similarity bhi ho to table structure best hai .",
+
+          "Space Management: Use a small comparison table to show how Algorithm A (10 steps) might be better than Algorithm B (50 steps) for the same task."
+        ]
+      },
+      {
+        id: 57,
+        title: "Comparison of Different Algorithms to Check Prime Number",
+
+        description: "Different algorithms can be used to check prime numbers. They vary in approach, efficiency, and best use cases.",
+
+        sections: [
+          {
+            heading: "Comparison Table",
+            table: {
+              headers: [
+                "Basis",
+                "Naïve Method",
+                "Optimized Method (Up to √n)",
+                "Sieve of Eratosthenes"
+              ],
+              rows: [
+                [
+                  "Approach",
+                  "Check divisibility from 2 to n−1",
+                  "Check divisibility from 2 to √n",
+                  "Generate all primes up to n"
+                ],
+                [
+                  "Idea",
+                  "If any number divides n, it is not prime",
+                  "Only check factors up to square root",
+                  "Eliminate multiples iteratively"
+                ],
+                [
+                  "Time Complexity",
+                  "O(n)",
+                  "O(√n)",
+                  "O(n log log n)"
+                ],
+                [
+                  "Efficiency",
+                  "Slow for large numbers",
+                  "Faster than naïve",
+                  "Very efficient for multiple prime queries"
+                ],
+                [
+                  "Best Used When",
+                  "Small numbers",
+                  "Single number prime check",
+                  "Finding all primes in a range"
+                ]
+              ]
+            }
+          }
+        ],
+
+        notes: [
+          "The \"Best Case\" Mention: Briefly mention that both algorithms can terminate early (Best Case O(1)) if the number is even and greater than 2.",
+          "Use a Comparison Table: To save space and improve readability, put O(n) vs O(\sqrt{n}) in a table."
+        ]
+      },
+      {
+        id: 58,
+        title: "Coding and the Role of High-Level Programming Languages (4 Marks)",
+
+        description: "Coding is the process of writing instructions for a computer using a specific programming language to implement an algorithm. It serves as the interface between human logic and machine execution.",
+
+        sections: [
+          {
+            heading: "Definition of Coding",
+            points: [
+              "Translates an algorithm into a programming language.",
+              "Converts logical steps into executable instructions.",
+              "Acts as a bridge between human thought and machine action."
+            ]
+          },
+          {
+            heading: "Role of High-Level Programming Languages",
+            points: [
+              "<b>Abstraction:</b> Allows developers to focus on logic without dealing with hardware-level details like CPU registers or memory addresses.",
+              "<b>Portability:</b> Programs written in languages such as Python or Java are generally machine-independent.",
+              "<b>Translation:</b> Uses <b>Compilers</b> or <b>Interpreters</b> to convert human-readable code into binary (0s and 1s).",
+              "<b>Efficiency:</b> English-like syntax makes coding faster, easier to debug, and easier to maintain."
+            ]
+          }
+        ],
+
+        notes: [
+          "Structure should be a 2/3 line definition.",
+          "Role heading and inside subheadings",
+          "Machine Executable Confusion: In your definition, you say coding converts algorithms into \"machine-executable form,\" but high-level code is actually human-readable and requires further translation to be machine-executable.",
+          "Portability: You missed one of the most important roles of high-level languages: Portability (the ability to run the same code on different types of hardware with minimal changes)."
+        ]
+      },
+      {
+        id: 59,
+        title: "Decomposition in Problem Solving (4 Marks)",
+
+        description: "Decomposition is a computational thinking technique that involves breaking down a large and complex problem into smaller, manageable sub-problems.",
+
+        sections: [
+          {
+            heading: "Definition",
+            points: [
+              "Divides a complex problem into smaller parts called sub-problems.",
+              "Each sub-problem can be solved independently."
+            ]
+          },
+          {
+            heading: "Why Decomposition is Important",
+            points: [
+              "<b>Manageability:</b> Smaller tasks are easier to understand and solve.",
+              "<b>Modularity:</b> Individual modules can be developed, tested, and debugged separately.",
+              "<b>Efficiency:</b> Saves time and resources through focused development."
+            ]
+          },
+          {
+            heading: "Example – School Management Application",
+            points: [
+              "Main Problem: Develop a complete school management system.",
+              "Module A: Student Registration System.",
+              "Module B: Attendance Tracking.",
+              "Module C: Fee Payment Gateway.",
+              "Module D: Result Generation.",
+              "After solving each module, they are integrated to form the complete system."
+            ]
+          }
+        ],
+
+        notes: [
+          "Already a fine answer. To make it perfect, you can add a small diagram showing the main problem at the top and arrows pointing down to the sub-problems (modules). This visual aid is often appreciated by examiners and can help secure that final 0.5 marks."
+        ]
+      }, {
+        id: 60,
+        title: "Features of the Python Programming Language (5 Marks)",
+
+        description: "Python is a high-level, general-purpose programming language known for its simplicity, readability, and powerful features.",
+
+        sections: [
+          {
+            heading: "Key Features of Python",
+            points: [
+              "<b>1. Simple and Readable:</b> Uses English-like syntax and indentation instead of curly braces, making programs easy to read and maintain.",
+              "<b>2. Interpreted:</b> Code is executed line-by-line by the Python Interpreter, making debugging easier.",
+              "<b>3. Dynamically Typed:</b> No need to declare variable types explicitly; type is assigned automatically at runtime.",
+              "<b>4. Extensive Standard Library:</b> Provides built-in modules for tasks such as file handling, regular expressions, web development, and more.",
+              "<b>5. Platform Independent:</b> Python programs run on Windows, macOS, and Linux without modification.",
+              "<b>6. Open Source:</b> Free to use with a large global community contributing to development and support."
+            ]
+          }
+        ],
+
+        notes: [
+          "Missing Features: For a 4 or 5-mark question, it is beneficial to mention that Python is Cross-platform (Portable) and Free/Open Source.",
+          "Keyword Injection: Use the terms 'Platform Independent' and 'High-level Language.'",
+          "Memory Management: Briefly mention that Python has Automatic Garbage Collection, meaning developers don't have to manually manage memory.",
+          "Case Sensitivity: Mention that Python is Case Sensitive (e.g., Variable and variable are different)."
+        ]
+      }, {
+        id: 61,
+        title: "Python Keywords – Definition and Examples (4 Marks)",
+
+        description: "Python keywords are reserved words with predefined meanings. They cannot be used as variable names, function names, or identifiers.",
+
+        sections: [
+          {
+            heading: "Definition",
+            points: [
+              "Reserved words in Python.",
+              "Have special meaning and predefined functionality.",
+              "Cannot be used as identifiers."
+            ]
+          },
+          {
+            heading: "Five Python Keywords with Uses",
+            table: {
+              headers: ["Keyword", "Purpose / Use", "Example"],
+              rows: [
+                ["def", "Defines a function", "def greet(): print(\"Hi\")"],
+                ["while", "Starts a conditional loop", "while True: pass"],
+                ["global", "Declares global scope inside a function", "global x; x = 5"],
+                ["assert", "Used for debugging to check conditions", "assert x > 0, \"Error\""],
+                ["raise", "Forces a specific exception", "raise ValueError(\"Msg\")"]
+              ]
+            }
+          }
+        ],
+
+        notes: [
+
+          "Space Management: You used nearly 20 lines for 5 keywords because of the Heading \rightarrow Syntax \rightarrow Example vertical stack.",
+          "Redundancy: You often repeated the keyword in the description (e.g., 'def' is used to define...). You can save space by starting the description immediately after the keyword.",
+          "Syntax vs. Example: In many cases, the syntax and example can be merged into a single Code Snippet to save lines.",
+
+          "Skip the formal 'Syntax' line: Most examiners only care about the actual example.",
+
+          "<b>Use a Table:</b> Tables are the #1 way to save space. They force you to be concise."
+        ]
+      },
+      {
+        id: 62,
+        title: "Python Identifiers – Naming Rules and Examples (4 Marks)",
+
+        description: "Identifiers are unique names used to identify variables, functions, classes, or other entities in a Python program.",
+
+        sections: [
+          {
+            heading: "Definition",
+            points: [
+              "Used to name variables, functions, classes, etc.",
+              "Help identify program elements uniquely."
+            ]
+          },
+          {
+            heading: "Naming Rules",
+            points: [
+              "<b>1. Character Set:</b> Must start with a letter (A–Z, a–z) or an underscore (_).",
+              "<b>2. Subsequent Characters:</b> May include digits (0–9) but cannot start with a digit.",
+              "<b>3. No Special Characters:</b> Symbols like @, $, #, -, etc., are not allowed.",
+              "<b>4. No Keywords:</b> Reserved words such as def, if, while cannot be used.",
+              "<b>5. Case Sensitive:</b> NAME and name are treated as different identifiers."
+            ]
+          },
+          {
+            heading: "Examples",
+            points: [
+              "<b>Valid:</b> _var1, my_count, StudentName",
+              "<b>Invalid:</b> 1var (starts with digit), my-var (contains hyphen), if (keyword)"
+            ]
+          }
+        ],
+
+        notes: [
+          "Each rule can have a heading.",
+          "Case Sensitivity: One of the most important technical rules for Python identifiers is that they are case-sensitive (e.g., Age and age are different). You missed",
+          "Undefined Length: It is worth mentioning that identifiers can be of any length, though it is best to keep them meaningful."
+        ]
+      },
+      {
+        id: 63,
+        title: "Variables in Python and Value Assignment (4 Marks)",
+
+        description: "A variable is a named reference (identifier) to a memory location that stores data. In Python, variables are dynamically typed, meaning their type is determined at runtime based on the assigned value.",
+
+        sections: [
+          {
+            heading: "Definition",
+            points: [
+              "Variables store data in memory.",
+              "They act as named references to values.",
+              "Python is <b>dynamically typed</b>, so data type is inferred automatically."
+            ]
+          },
+          {
+            heading: "Value Assignment Methods",
+            points: [
+              "<b>1. Direct Assignment:</b> Uses the = operator. Example: x = 10",
+              "<b>2. User Input:</b> Uses input() function. Example: name = input(\"Enter Name\")",
+              "<b>3. Type Casting:</b> Forces a specific data type. Example: price = float(50)",
+              "<b>4. Multiple Assignment:</b> Assign multiple values in one line. Example: a, b = 5, 10"
+            ]
+          }
+        ],
+
+        notes: [
+          "The '=' Operator: Start the second section by stating that the equal sign (=) is used to assign the value on the right to the variable on the left.",
+          "Keyword Injection: Use the term 'Object Reference.' In Python, variables are actually references to objects in memory, not just 'containers.'",
+          "Horizontal Layout: To save space on the three types of assignment, use a small table or side-by-side bullet points.",
+          "Terminology Confusion: You used 'Implicit Type Casting' to describe basic variable assignment (e.g., pi = 3.14). In Python, this is technically called Dynamic Binding or Type Inference.",
+          " Implicit Type Casting' usually refers to Python automatically changing a type during an operation (like 5 + 2.0 becoming 7.0).",
+          "Grammar/Spelling: You wrote 'Allowed to be operation performed (better: perform operations). You also wrote 'Explicity' instead of Explicitly.",
+          "Missing Assignment Operator: You should explicitly mention the = (Assignment Operator) as the primary tool used for assigning values."
+        ]
+      }
 
     ];
 
