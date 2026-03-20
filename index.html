@@ -2728,8 +2728,3157 @@
           "Grammar/Spelling: You wrote 'Allowed to be operation performed (better: perform operations). You also wrote 'Explicity' instead of Explicitly.",
           "Missing Assignment Operator: You should explicitly mention the = (Assignment Operator) as the primary tool used for assigning values."
         ]
-      }
+      },
+      {
+        id: 64,
+        title: "Comments in Python (4 Marks)",
 
+        description: "Comments are non-executable statements in a Python program used to provide explanations or notes for programmers. The Python interpreter ignores comments during program execution.",
+
+        sections: [
+          {
+            heading: "Purpose of Comments",
+            points: [
+              "<b>Readability:</b> Helps programmers understand the code easily.",
+              "<b>Maintenance:</b> Makes debugging and future updates easier.",
+              "<b>Documentation:</b> Explains the logic of complex code sections, functions, or modules."
+            ]
+          },
+          {
+            heading: "Types of Comments",
+            points: [
+              "<b>1. Single-line Comment:</b> Starts with <code>#</code>. Example: <code># This is a comment</code>",
+              "<b>2. Multi-line Comment / Docstring:</b> Written using triple quotes <code>''' </code> or <code>\"\"\" </code> for longer explanations."
+            ]
+          }
+        ],
+
+        notes: []
+      },
+      {
+        id: 65,
+        title: "Python Data Types: int, float, complex, bool (4 Marks)",
+
+        description: "Data types in Python represent the type of value stored in a variable and determine the operations that can be performed on that data. The types int, float, complex, and bool belong to the Numeric category and are immutable.",
+
+        sections: [
+          {
+            heading: "Types of Python Numeric Data Types",
+            points: [
+              "<b>int (Integer):</b> Represents whole numbers (positive or negative) without decimal points. Example: <code>x = 10</code>",
+              "<b>float:</b> Represents real numbers with decimal points. Example: <code>y = 10.5</code>",
+              "<b>complex:</b> Represents numbers with real and imaginary parts in the form <code>a + bj</code>. Example: <code>z = 3 + 4j</code>",
+              "<b>bool (Boolean):</b> Represents logical values <code>True</code> or <code>False</code>. Internally, True = 1 and False = 0. Example: <code>is_valid = True</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        question: "Difference between Mutable and Immutable Data Types (4 Marks)",
+
+        definition: "Mutable data types are objects whose values can be modified after creation, whereas immutable data types cannot be changed once created.",
+
+        comparison_table: [
+          {
+            basis: "Definition",
+            immutable: "Content cannot be changed after the object is created.",
+            mutable: "Content can be modified after the object is created."
+          },
+          {
+            basis: "In-place Modification",
+            immutable: "Not supported. Any change creates a new object.",
+            mutable: "Supported. Object can be modified directly."
+          },
+          {
+            basis: "Memory Behavior",
+            immutable: "Changing value creates a new object at a new memory address.",
+            mutable: "Changes occur at the same memory address."
+          },
+          {
+            basis: "Dictionary Keys",
+            immutable: "Can be used as dictionary keys because they are hashable.",
+            mutable: "Generally cannot be used as dictionary keys."
+          },
+          {
+            basis: "Examples",
+            immutable: "int, float, string, tuple",
+            mutable: "list, dictionary, set"
+          }
+        ],
+
+        example: `
+# Immutable Example
+t = (1, 2)
+t[0] = 5   # Raises TypeError
+
+# Mutable Example
+l = [1, 2]
+l[0] = 5   # Value changes successfully
+`
+      }, {
+        id: 66,
+        title: "Difference between Mutable and Immutable Data Types (4 Marks)",
+
+        description: "In Python, data types can be categorized based on whether their values can be changed after creation. Mutable data types allow modification of their contents, whereas immutable data types do not allow any change once the object is created.",
+
+        sections: [
+          {
+            heading: "Comparison between Mutable and Immutable Data Types",
+            table: {
+              headers: ["Basis", "Immutable Data Types", "Mutable Data Types"],
+              rows: [
+                ["Definition", "Content cannot be changed after the object is created.", "Content can be modified after the object is created."],
+                ["In-place Modification", "Not supported. Any modification creates a new object.", "Supported. The object can be modified directly."],
+                ["Memory Behavior", "Changing the value creates a new object at a new memory address.", "Changes occur at the same memory address."],
+                ["Dictionary Keys", "Can be used as dictionary keys because they are hashable.", "Generally cannot be used as dictionary keys."],
+                ["Examples", "int, float, string, tuple", "list, dictionary, set"]
+              ]
+            }
+          },
+          {
+            heading: "Technical Example",
+            points: [
+              "<b>Immutable Example:</b>",
+              "<code>t = (1, 2)</code>",
+              "<code>t[0] = 5</code> → Raises <code>TypeError</code> because tuple is immutable.",
+              "",
+              "<b>Mutable Example:</b>",
+              "<code>l = [1, 2]</code>",
+              "<code>l[0] = 5</code> → Value changes successfully because list is mutable."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 67,
+        title: "Python Arithmetic Operators (4 Marks)",
+
+        description: "Arithmetic operators in Python are used to perform mathematical calculations on numeric values. In Python 3, the standard division operator (/) always returns a floating-point result, while floor division (//) rounds the result down to the nearest whole number.",
+
+        sections: [
+          {
+            heading: "Types of Arithmetic Operators",
+            table: {
+              headers: ["Operator", "Name", "Description", "Example", "Result"],
+              rows: [
+                ["+", "Addition", "Adds two operands.", "5 + 3", "8"],
+                ["-", "Subtraction", "Subtracts the right operand from the left operand.", "8 - 3", "5"],
+                ["*", "Multiplication", "Multiplies two operands.", "2 * 3", "6"],
+                ["/", "True Division", "Divides two numbers and always returns a float value.", "7 / 2", "3.5"],
+                ["//", "Floor Division", "Divides two numbers and rounds down to the nearest integer.", "7 // 2", "3"],
+                ["%", "Modulo", "Returns the remainder of a division.", "7 % 2", "1"],
+                ["**", "Exponentiation", "Raises the left operand to the power of the right operand.", "2 ** 3", "8"]
+              ]
+            }
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 68,
+        title: "Python Relational Operators (4 Marks)",
+
+        description: "Relational operators in Python are used to compare two operands. The result of the comparison is always a Boolean value (True or False). For strings, comparison is performed lexicographically based on ASCII or Unicode values.",
+
+        sections: [
+          {
+            heading: "Types of Relational Operators",
+            table: {
+              headers: ["Operator", "Name", "Description", "Example (A = 5, B = 3)", "Result"],
+              rows: [
+                [">", "Greater than", "Returns True if the left operand is greater than the right operand.", "A > B", "True"],
+                ["<", "Less than", "Returns True if the left operand is less than the right operand.", "A < B", "False"],
+                ["==", "Equal to", "Returns True if both operands are equal.", "A == B", "False"],
+                ["!=", "Not equal to", "Returns True if operands are not equal.", "A != B", "True"],
+                [">=", "Greater than or equal to", "Returns True if the left operand is greater than or equal to the right operand.", "A >= B", "True"],
+                ["<=", "Less than or equal to", "Returns True if the left operand is less than or equal to the right operand.", "A <= B", "False"]
+              ]
+            }
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 69,
+        title: "Python Logical Operators (4 Marks)",
+
+        description: "Logical operators in Python are used to combine conditional statements and evaluate them into a single Boolean value (True or False).",
+
+        sections: [
+          {
+            heading: "Types of Logical Operators",
+            points: [
+              "**and**: Returns True only if all operands are True.",
+              "**or**: Returns True if at least one operand is True.",
+              "**not**: It is a unary operator that reverses the Boolean state of its operand."
+            ]
+          },
+          {
+            heading: "Combined Truth Table",
+            table: {
+              headers: ["Operand A", "Operand B", "A and B", "A or B", "not A"],
+              rows: [
+                ["True", "True", "True", "True", "False"],
+                ["True", "False", "False", "True", "False"],
+                ["False", "True", "False", "True", "True"],
+                ["False", "False", "False", "False", "True"]
+              ]
+            }
+          },
+          {
+            heading: "Python Examples",
+            points: [
+              "**and** : (5 > 3) and (10 == 10) → True",
+              "**or** : (1 > 5) or (4 <= 4) → True",
+              "**not** : not (5 == 5) → False"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 70,
+        title: "Python Identity Operators (4 Marks)",
+
+        description: "Identity operators in Python check whether two variables refer to the exact same object in memory. They compare object identity rather than value equality. Internally, Python uses the id() function to determine the memory address of objects.",
+
+        sections: [
+          {
+            heading: "Identity Operators",
+            table: {
+              headers: ["Operator", "Description", "Example"],
+              rows: [
+                ["is", "Returns True if both variables point to the same object in memory.", "a = [1,2]; b = a → a is b → True"],
+                ["is not", "Returns True if variables point to different objects.", "x = 5; y = 10 → x is not y → True"]
+              ]
+            }
+          },
+          {
+            heading: "Important Note",
+            points: [
+              "The **== operator** compares values of two objects.",
+              "The **is operator** compares whether two variables refer to the **same memory location**.",
+              "Identity operators are commonly used when checking for **None** values."
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>a = [1,2]</code>",
+              "<code>b = a</code>",
+              "<code>a is b → True</code> (Both reference the same object)",
+              "<code>a == b → True</code> (Values are also equal)"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 71,
+        title: "Python Membership Operators (4 Marks)",
+
+        description: "Membership operators in Python are used to test whether a specific value exists within a sequence or iterable such as a string, list, tuple, set, or dictionary.",
+
+        sections: [
+          {
+            heading: "Membership Operators",
+            table: {
+              headers: ["Operator", "Description", "Example", "Result"],
+              rows: [
+                ["in", "Returns True if the specified element is present in the sequence.", "'yash' in 'yashika'", "True"],
+                ["in", "Checks whether an element exists inside a list.", "5 in [1, 2, 3]", "False"],
+                ["not in", "Returns True if the specified element is NOT present in the sequence.", "9 not in [1, 5, 7]", "True"],
+                ["not in", "Checks whether a character is absent from a string.", "'a' not in 'apple'", "False"]
+              ]
+            }
+          },
+          {
+            heading: "Important Note",
+            points: [
+              "Membership operators work with sequences like **strings, lists, tuples, sets, and dictionaries**.",
+              "For **dictionaries**, the operator checks only for the presence of **keys**, not values.",
+              "They are commonly used in **searching and conditional statements**."
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>fruits = ['apple', 'banana', 'mango']</code>",
+              "<code>'apple' in fruits → True</code>",
+              "<code>'grape' not in fruits → True</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 72,
+        title: "Expressions and Operator Precedence in Python (4 Marks)",
+
+        description: "An expression in Python is a combination of values, variables, operators, and function calls that the interpreter evaluates to produce a single value.",
+
+        sections: [
+          {
+            heading: "Expression",
+            points: [
+              "An **expression** consists of values, variables, operators, or function calls that are evaluated to produce a result.",
+              "A **single value or variable** is also considered a valid expression.",
+              "Example: In <code>x = y + 5</code>, the part <code>y + 5</code> is the expression.",
+              "Expressions are used in assignments, conditions, and calculations."
+            ]
+          },
+          {
+            heading: "Operator Precedence",
+            points: [
+              "**Operator precedence** determines the order in which operations are evaluated in an expression containing multiple operators.",
+              "**Parentheses ()** have the highest priority and can override the default order of evaluation.",
+              "Example: <code>5 + 3 * 2 = 11</code> because multiplication is performed before addition.",
+              "Example with parentheses: <code>(5 + 3) * 2 = 16</code>"
+            ]
+          },
+          {
+            heading: "Associativity",
+            points: [
+              "If two operators have the same precedence, evaluation follows **associativity rules**.",
+              "Most operators are evaluated **Left-to-Right**.",
+              "The **exponentiation operator (**) is evaluated Right-to-Left**.",
+              "Example: <code>2 ** 3 ** 2 = 2 ** (3 ** 2) = 512</code>"
+            ]
+          },
+          {
+            heading: "Operator Precedence Table (High to Low)",
+            table: {
+              headers: ["Precedence", "Operators", "Description"],
+              rows: [
+                ["1", "**", "Exponentiation"],
+                ["2", "+x, -x, ~x", "Unary plus, minus, bitwise NOT"],
+                ["3", "*, /, //, %", "Multiplication, Division, Floor Division, Modulo"],
+                ["4", "+, -", "Addition and Subtraction"],
+                ["5", "<, <=, >, >=, ==, !=", "Relational / Comparison Operators"],
+                ["6", "=, +=, -=, etc.", "Assignment Operators"],
+                ["7", "is, is not", "Identity Operators"],
+                ["8", "in, not in", "Membership Operators"],
+                ["9", "not", "Logical NOT"],
+                ["10", "and", "Logical AND"],
+                ["11", "or", "Logical OR"]
+              ]
+            }
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 73,
+        title: "Python input() and print() Functions (4 Marks)",
+
+        description: "The input() and print() functions are built-in Python functions used for interaction with the user. input() takes data from the user during program execution, while print() displays output on the screen.",
+
+        sections: [
+          {
+            heading: "input() Function",
+            points: [
+              "The <code>input()</code> function is used to **take input from the user during runtime**.",
+              "It **always returns the input as a string**, regardless of the type of value entered.",
+              "To use the input as a number, **typecasting** such as <code>int()</code> or <code>float()</code> must be used.",
+              "Syntax: <code>input([prompt])</code>, where <code>prompt</code> is an optional message shown to the user."
+            ]
+          },
+          {
+            heading: "Examples of input()",
+            points: [
+              "<code>name = input(\"Enter name: \")</code>",
+              "<code>age = int(input(\"Enter age: \"))</code> (Input converted to integer using typecasting)"
+            ]
+          },
+          {
+            heading: "print() Function",
+            points: [
+              "The <code>print()</code> function is used to **display output to the console**.",
+              "It can print **strings, variables, expressions, or multiple values at once**.",
+              "Syntax: <code>print(*objects, sep=' ', end='\\n')</code>",
+              "<code>sep</code> specifies the **separator between values** (default is space).",
+              "<code>end</code> specifies what is printed **at the end of the output** (default is newline)."
+            ]
+          },
+          {
+            heading: "Examples of print()",
+            points: [
+              "<code>print(\"Hello\", \"World\", sep=\"-\")</code> → Output: Hello-World",
+              "<code>print(\"Python\", end=\"!\")</code> → Output: Python!"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 74,
+        title: "Type Conversion in Python (4 Marks)",
+
+        description: "Type conversion is the process of converting one data type into another in Python. It can occur automatically by the interpreter or manually by the programmer using type casting functions.",
+
+        sections: [
+          {
+            heading: "Types of Type Conversion",
+            points: [
+              "<b>Implicit Type Conversion (Type Promotion):</b> Automatically performed by the Python interpreter.",
+              "Python promotes smaller data types to larger ones to avoid data loss (for example: <code>int → float</code>).",
+              "No built-in function is required because the conversion happens automatically.",
+              "Example: <code>x = 5 + 2.5</code> → Integer <code>5</code> is promoted to float, result = <code>7.5</code>."
+            ]
+          },
+          {
+            heading: "Explicit Type Conversion (Type Casting)",
+            points: [
+              "Manually performed by the programmer using built-in functions.",
+              "Common type casting functions include <code>int()</code>, <code>float()</code>, <code>str()</code>, and <code>list()</code>.",
+              "There is a possibility of data loss when converting from a larger type to a smaller type.",
+              "Example: <code>y = int(4.9)</code> → Result becomes <code>4</code> (decimal part truncated)."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 75,
+        title: "Types of Errors in Python (4 Marks)",
+
+        description: "An error (or bug) is a flaw in a program that prevents it from running correctly or producing the expected output. In Python, errors are generally classified into three main types.",
+
+        sections: [
+          {
+            heading: "1. Syntax Error",
+            points: [
+              "Occurs when the rules of Python grammar are violated.",
+              "The Python interpreter detects these errors before the program execution starts.",
+              "The program cannot run until the syntax error is fixed.",
+              "Example:",
+              "<code>if x == 5</code>",
+              "<code>print(x)</code>",
+              "Error occurs because the colon <code>:</code> is missing after the condition."
+            ]
+          },
+          {
+            heading: "2. Runtime Error",
+            points: [
+              "Occurs during the execution of a program when an illegal operation is performed.",
+              "These errors cause the program to terminate abruptly.",
+              "They are also called exceptions.",
+              "Example:",
+              "<code>result = 5 / 0</code>",
+              "This raises a <code>ZeroDivisionError</code> because division by zero is not allowed."
+            ]
+          },
+          {
+            heading: "3. Logical Error",
+            points: [
+              "Occurs when the program executes without crashing but produces incorrect output.",
+              "These errors happen due to mistakes in the program logic.",
+              "The interpreter cannot detect logical errors; they are usually found during testing.",
+              "Example: Using the wrong formula or operator while calculating a result."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 76,
+        title: "Debugging in Python (4 Marks)",
+
+        description: "Debugging is the systematic process of identifying, isolating, and fixing errors (bugs) in a computer program so that it works correctly and produces the expected output.",
+
+        sections: [
+          {
+            heading: "Importance of Debugging",
+            points: [
+              "<b>System Stability & Reliability:</b> Prevents unexpected crashes and ensures the program runs smoothly.",
+              "<b>Security:</b> Helps detect vulnerabilities or logical loopholes that could be exploited by malicious users.",
+              "<b>Resource Optimization:</b> Identifies inefficient code or memory leaks, improving execution speed and reducing resource usage.",
+              "<b>Quality Assurance:</b> Ensures the software meets user requirements and works correctly for all test cases and edge conditions."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 77,
+        title: "if Statement in Python (4 Marks)",
+
+        description: "The if statement is a conditional branching statement used for decision-making in Python. It evaluates a Boolean condition, and if the condition is True, the indented block of code under it is executed. If the condition is False, the block is skipped.",
+
+        sections: [
+          {
+            heading: "Syntax of if Statement",
+            points: [
+              "<code>if condition:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;# statements executed when condition is True</code>"
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>score = 85</code>",
+              "<code>if score >= 80:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Grade: A')</code>",
+              "<code>if score == 100:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Perfect')</code>"
+            ]
+          },
+          {
+            heading: "Explanation",
+            points: [
+              "The condition <code>score >= 80</code> is True, so the statement <code>print('Grade: A')</code> executes.",
+              "The condition <code>score == 100</code> is False, so the statement <code>print('Perfect')</code> is skipped."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 78,
+        title: "if-elif-else Statement in Python (4 Marks)",
+
+        description: "The if-elif-else statement is used for multi-way decision making in Python. It evaluates conditions one by one. If the first condition is False, Python checks the next condition using elif. If none of the conditions are True, the else block is executed.",
+
+        sections: [
+          {
+            heading: "Syntax",
+            points: [
+              "<code>if condition1:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;# executes if condition1 is True</code>",
+              "<code>elif condition2:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;# executes if condition2 is True</code>",
+              "<code>else:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;# executes if none of the above conditions are True</code>"
+            ]
+          },
+          {
+            heading: "Example: Largest of Two Numbers",
+            points: [
+              "<code>num1 = int(input('Enter first number: '))</code>",
+              "<code>num2 = int(input('Enter second number: '))</code>",
+              "<code>if num1 > num2:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print(num1, 'is greater than', num2)</code>",
+              "<code>elif num2 > num1:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print(num2, 'is greater than', num1)</code>",
+              "<code>else:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Both numbers are equal')</code>"
+            ]
+          },
+          {
+            heading: "Explanation",
+            points: [
+              "If <code>num1 > num2</code>, the first block executes.",
+              "If the first condition is False, Python checks <code>num2 > num1</code> using <code>elif</code>.",
+              "If both conditions are False, the <code>else</code> block executes and prints that both numbers are equal."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 79,
+        title: "Indentation in Python (4 Marks)",
+
+        description: "Indentation in Python refers to the leading whitespace (spaces or tabs) at the beginning of a line of code. It is used to define the scope of code blocks such as conditions, loops, and functions.",
+
+        sections: [
+          {
+            heading: "Definition",
+            points: [
+              "Indentation determines which statements belong to a particular block of code.",
+              "Python uses a colon <code>:</code> to start a block, followed by consistently indented lines.",
+              "Unlike languages such as C++ or Java that use curly braces <code>{ }</code>, Python relies on indentation."
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>if True:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('This is inside the block')</code>  (Indented by 4 spaces)"
+            ]
+          },
+          {
+            heading: "Significance of Indentation",
+            points: [
+              "<b>Syntactic Necessity:</b> Indentation is mandatory for Python to understand code structure.",
+              "<b>Mandatory Readability:</b> It improves readability by clearly organizing logical blocks.",
+              "<b>Structural Integrity:</b> Prevents ambiguity and errors that may occur due to misplaced brackets in other languages."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 80,
+        title: "for Loop in Python (4 Marks)",
+
+        description: "A for loop in Python is used to repeat a block of code for each item in a sequence such as a list, string, tuple, or range. It automatically iterates through each element until the sequence is finished.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>for</code> loop executes a block of code multiple times.",
+              "It works by iterating through elements of a sequence one by one.",
+              "Common sequences used in a for loop include lists, strings, tuples, and ranges."
+            ]
+          },
+          {
+            heading: "Syntax",
+            points: [
+              "<code>for item in sequence:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;# block of code to execute</code>"
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>numbers = [1, 2, 3]</code>",
+              "<code>for n in numbers:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print(n)</code>",
+              "Output: 1 2 3 (each number printed on a new line)"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 81,
+        title: "range() Function in Python (4 Marks)",
+
+        description: "The range() function in Python generates a sequence of numbers and is commonly used with for loops for iteration.",
+
+        sections: [
+          {
+            heading: "Syntax",
+            points: [
+              "<code>range(start, stop, step)</code>"
+            ]
+          },
+          {
+            heading: "Parameters",
+            points: [
+              "<b>start (Optional):</b> Starting value of the sequence. It is inclusive. Default value is <code>0</code>.",
+              "<b>stop (Required):</b> Ending limit of the sequence. It is exclusive, meaning the sequence stops before this value.",
+              "<b>step (Optional):</b> Specifies the interval between numbers. Default value is <code>1</code>."
+            ]
+          },
+          {
+            heading: "Examples",
+            points: [
+              "<b>One argument (stop):</b> <code>list(range(5))</code> → Output: <code>[0, 1, 2, 3, 4]</code>",
+              "<b>Two arguments (start, stop):</b> <code>list(range(2, 6))</code> → Output: <code>[2, 3, 4, 5]</code>",
+              "<b>Three arguments (start, stop, step):</b> <code>list(range(1, 10, 2))</code> → Output: <code>[1, 3, 5, 7, 9]</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 82,
+        title: "while Loop in Python (4 Marks)",
+
+        description: "A while loop in Python repeatedly executes a block of code as long as a specified condition remains True. The condition is checked before every iteration.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "A <code>while</code> loop continues execution while the condition evaluates to <code>True</code>.",
+              "Before each iteration, the condition is checked again.",
+              "When the condition becomes <code>False</code>, the loop terminates."
+            ]
+          },
+          {
+            heading: "Key Features",
+            points: [
+              "<b>Condition-Based:</b> The loop runs based on a Boolean condition rather than a fixed number of iterations.",
+              "<b>Infinite Loop Possibility:</b> If the condition never becomes False, the loop continues indefinitely unless interrupted."
+            ]
+          },
+          {
+            heading: "Syntax",
+            points: [
+              "<code>while condition:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;# block of code to execute</code>"
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>count = 3</code>",
+              "<code>while count > 0:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print(count)</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;count -= 1</code>",
+              "Output: 3 2 1 (loop stops when count becomes 0)"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 83,
+        title: "break vs continue Statements in Python (4 Marks)",
+
+        description: "Both break and continue are jump statements used inside loops to control the flow of execution. However, they affect loop behavior in different ways.",
+
+        sections: [
+          {
+            heading: "Comparison between break and continue",
+            table: {
+              headers: ["Basis", "break Statement", "continue Statement"],
+              rows: [
+                ["What it does", "Stops execution and completely exits the loop.", "Skips the remaining code in the current iteration and moves to the next iteration."],
+                ["Execution Pointer", "Control jumps outside the loop.", "Control jumps to the top of the loop for the next iteration."]
+              ]
+            }
+          },
+          {
+            heading: "Example: break Statement",
+            points: [
+              "<code>for i in range(1, 4):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;if i == 2:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print(i)</code>",
+              "Output: 1"
+            ]
+          },
+          {
+            heading: "Example: continue Statement",
+            points: [
+              "<code>for i in range(1, 4):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;if i == 2:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print(i)</code>",
+              "Output: 1 3"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 84,
+        title: "Nested Loops in Python (4 Marks)",
+
+        description: "A nested loop is a loop placed inside another loop. For every iteration of the outer loop, the inner loop executes completely from start to finish.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "A **nested loop** consists of an inner loop inside the body of an outer loop.",
+              "During each iteration of the outer loop, the inner loop runs its entire cycle.",
+              "Nested loops are commonly used when working with **multidimensional data structures**."
+            ]
+          },
+          {
+            heading: "Key Features",
+            points: [
+              "<b>Total Iterations:</b> The total number of executions equals the product of the outer and inner loop counts.",
+              "<b>Scope of break:</b> A <code>break</code> inside the inner loop stops only the inner loop, not the outer loop.",
+              "<b>Common Uses:</b> Used in matrix operations, pattern printing, and processing 2D lists."
+            ]
+          },
+          {
+            heading: "Example (Printing a 2D List)",
+            points: [
+              "<code>matrix = [[1, 2, 3],</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4, 5, 6]]</code>",
+              "",
+              "<code>for row in matrix:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;for item in row:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(item, end=' ')</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print()</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 85,
+        title: "Functions in Python (4 Marks)",
+
+        description: "A function is a reusable block of code that performs a specific task and runs only when it is called. Functions can accept input values called parameters and may return a result. If no value is returned explicitly, Python automatically returns None.",
+
+        sections: [
+          {
+            heading: "Syntax",
+            points: [
+              "<code>def function_name(parameters):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;# block of code</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;return result</code>"
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>def get_square(num):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;return num ** 2</code>",
+              "",
+              "<code>print(get_square(5))</code>",
+              "Output: 25"
+            ]
+          },
+          {
+            heading: "Advantages of Functions",
+            points: [
+              "<b>Code Reusability:</b> Functions allow the same code to be used multiple times, reducing repetition.",
+              "<b>Returns Multiple Values:</b> Python functions can return multiple values at once as a tuple.",
+              "<b>Modularity:</b> Functions divide a large program into smaller, manageable, and testable parts."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 86,
+        title: "Difference between Parameters and Arguments in Python (4 Marks)",
+
+        description: "Parameters and arguments are related to functions in Python. Parameters are the variables defined in the function definition, while arguments are the actual values passed to the function when it is called.",
+
+        sections: [
+          {
+            heading: "Comparison between Parameters and Arguments",
+            table: {
+              headers: ["Basis of Difference", "Parameters", "Arguments"],
+              rows: [
+                ["Meaning", "Variables listed inside the parentheses when defining a function.", "Actual values passed to the function when it is called."],
+                ["Timing", "Created during function definition.", "Supplied during function execution (function call)."],
+                ["Uniqueness", "Parameter names must be unique.", "Argument values can be duplicated."]
+              ]
+            }
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code># 'a' and 'b' are PARAMETERS</code>",
+              "<code>def add_numbers(a, b):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;return a + b</code>",
+              "",
+              "<code># '10' and '20' are ARGUMENTS</code>",
+              "<code>result = add_numbers(10, 20)</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 87,
+        title: "Default Parameters in Python (4 Marks)",
+
+        description: "Default parameters are function parameters that have a predefined value assigned during function definition. If no value is provided during the function call, the default value is used automatically.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "Default parameters allow functions to work even when some arguments are not provided.",
+              "If the caller supplies a value, the default value is replaced.",
+              "If no value is supplied, the function uses the predefined default value."
+            ]
+          },
+          {
+            heading: "Rule",
+            points: [
+              "Default parameters must always be placed **at the end of the parameter list**.",
+              "Non-default (normal) parameters cannot appear after default parameters."
+            ]
+          },
+          {
+            heading: "Syntax",
+            points: [
+              "<code>def function_name(normal_param, default_param='value'):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;# block of code</code>"
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>def greet(name, msg='Good Morning'):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print(f'Hello {name}, {msg}')</code>",
+              "",
+              "<code>greet('Alice')</code> → Output: Hello Alice, Good Morning",
+              "<code>greet('Bob', 'Hi!')</code> → Output: Hello Bob, Hi!"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 88,
+        title: "return Statement in Python (4 Marks)",
+
+        description: "The return keyword is used inside a function to send a result back to the place where the function was called. Once the return statement executes, the function immediately stops running.",
+
+        sections: [
+          {
+            heading: "Types of Return",
+            points: [
+              "<b>Single Value Return:</b> A function returns a single value such as a number or string.",
+              "If a function does not explicitly use <code>return</code>, Python automatically returns <code>None</code>.",
+              "<b>Multi-Value Return:</b> A function can return multiple values separated by commas.",
+              "Python automatically groups multiple returned values into a <b>tuple</b> (tuple packing)."
+            ]
+          },
+          {
+            heading: "Examples",
+            table: {
+              headers: ["Single Return", "Multiple Return (Tuple Packing)"],
+              rows: [
+                [
+                  "<code>def get_square(n):<br>    return n * n<br><br>ans = get_square(4)<br>print(ans)  # 16</code>",
+                  "<code>def get_math(a, b):<br>    return a+b, a-b<br><br>add, sub = get_math(10, 5)<br>print(add, sub)  # 15 5</code>"
+                ]
+              ]
+            }
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 89,
+        title: "Flow of Execution in Python (4 Marks)",
+
+        description: "The flow of execution refers to the order in which statements in a Python program are executed by the interpreter. By default, Python executes code from top to bottom, starting from the first line of the program.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "Execution normally begins at the first line of the program and proceeds sequentially from top to bottom.",
+              "When Python encounters a <code>def</code> statement, it stores the function definition in memory but does not execute its body immediately.",
+              "The statements inside the function run only when the function is explicitly called."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>1. def add(a, b):</code>",
+              "<code>2. &nbsp;&nbsp;&nbsp;&nbsp;sum = a + b</code>",
+              "<code>3. &nbsp;&nbsp;&nbsp;&nbsp;return sum</code>",
+              "<code>4.</code>",
+              "<code>5. x = 10</code>",
+              "<code>6. y = 5</code>",
+              "<code>7. result = add(x, y)</code>",
+              "<code>8. print(result)</code>"
+            ]
+          },
+          {
+            heading: "Flow of Execution Trace",
+            points: [
+              "<b>Line 1:</b> Python reads the function definition and stores it in memory; lines 2 and 3 are not executed yet.",
+              "<b>Lines 5–6:</b> Variables <code>x</code> and <code>y</code> are assigned values.",
+              "<b>Line 7:</b> The function <code>add()</code> is called, so execution jumps back to the function body.",
+              "<b>Lines 2–3:</b> The function performs the addition and returns the result.",
+              "<b>Line 8:</b> The returned value is printed."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 90,
+        title: "Program to Calculate Factorial of a Number in Python (4 Marks)",
+
+        description: "Factorial of a number is the product of all positive integers less than or equal to that number. For example, factorial of 5 (5!) = 5 × 4 × 3 × 2 × 1 = 120.",
+
+        sections: [
+          {
+            heading: "Program",
+            points: [
+              "<code>def calculate_factorial(num):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;if num < 0:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 'Factorial does not exist for negative numbers'</code>",
+              "",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;if num == 0 or num == 1:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1</code>",
+              "",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;fact = 1</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;while num > 1:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fact = fact * num</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num -= 1</code>",
+              "",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;return fact</code>",
+              "",
+              "<code>user_num = int(input('Enter a number: '))</code>",
+              "<code>result = calculate_factorial(user_num)</code>",
+              "<code>print('The factorial is:', result)</code>"
+            ]
+          },
+          {
+            heading: "Sample Execution",
+            points: [
+              "Input: 5",
+              "Output: The factorial is: 120"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 91,
+        title: "Passing Strings to Functions in Python (4 Marks)",
+
+        description: "In Python, strings can be passed to functions as parameters just like other variables. However, strings are immutable, meaning their content cannot be changed once created.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "Strings can be passed as arguments to functions.",
+              "Strings are <b>immutable</b>, which means their value cannot be changed after creation.",
+              "If a string is modified inside a function (e.g., converting to uppercase), Python creates a <b>new string object</b> instead of modifying the original one."
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>def make_uppercase(text):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;new_text = text.upper()</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;return new_text</code>",
+              "",
+              "<code>message = 'hello'</code>",
+              "<code>result = make_uppercase(message)</code>",
+              "",
+              "<code>print('Original:', message)</code>",
+              "<code>print('Result:', result)</code>"
+            ]
+          },
+          {
+            heading: "Output",
+            points: [
+              "Original: hello",
+              "Result: HELLO"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 92,
+        title: "Returning Multiple Values from a Function in Python (4 Marks)",
+
+        description: "Python allows a function to return multiple values at the same time. The values are separated by commas and automatically packed into a tuple.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "A function can return more than one value by separating them with commas.",
+              "Python automatically groups these values into a single tuple. This process is called <b>Tuple Packing</b>.",
+              "When the function is called, the returned tuple can be assigned to multiple variables. This is called <b>Tuple Unpacking</b>."
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>def get_student_info():</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;name = 'Alice'</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;roll_no = 15</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;marks = 92.5</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;return name, roll_no, marks</code>",
+              "",
+              "<code>student_name, student_roll, student_marks = get_student_info()</code>",
+              "",
+              "<code>print(student_name, student_roll, student_marks)</code>"
+            ]
+          },
+          {
+            heading: "Output",
+            points: [
+              "Alice 15 92.5"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 93,
+        title: "Purpose of the return Statement in Python (4 Marks)",
+
+        description: "The return statement is used inside a function to stop its execution and send a result back to the place where the function was called.",
+
+        sections: [
+          {
+            heading: "Core Purposes",
+            points: [
+              "<b>Passes Data Back:</b> It sends the computed result (single value or multiple values) back to the main program.",
+              "<b>Immediate Termination:</b> When a return statement executes, the function stops immediately and any code after it will not run.",
+              "<b>Memory Management:</b> After return executes, the function finishes its lifecycle and is removed from the call stack.",
+              "<b>Default Behavior:</b> If no return statement is written, Python automatically returns <code>None</code>."
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>def check_even(num):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;if num % 2 == 0:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return True</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;return False</code>"
+            ]
+          },
+          {
+            heading: "Explanation of Example",
+            points: [
+              "If the number is even, the function immediately returns <code>True</code>.",
+              "If the first condition is skipped, the function returns <code>False</code>."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 94,
+        title: "Difference between return Statement and print() Function in Python (4 Marks)",
+
+        description: "The return statement and the print() function serve different purposes in Python. The return statement sends data back from a function, while print() displays output on the screen.",
+
+        sections: [
+          {
+            heading: "Comparison between return and print()",
+            table: {
+              headers: ["Basis of Difference", "return Statement", "print() Function"],
+              rows: [
+                [
+                  "Core Purpose",
+                  "Sends data back to the program so it can be stored in a variable or used in calculations.",
+                  "Displays data on the screen for the user to see."
+                ],
+                [
+                  "Classification",
+                  "It is a Python keyword.",
+                  "It is a built-in Python function."
+                ],
+                [
+                  "Scope",
+                  "Can only be used inside a function.",
+                  "Can be used anywhere in the program."
+                ],
+                [
+                  "Ending Behavior",
+                  "Immediately stops the function when executed.",
+                  "Does not stop execution; the program continues to the next line."
+                ],
+                [
+                  "Example",
+                  "<code>return 5 + 5</code>",
+                  "<code>print(5 + 5)</code>"
+                ]
+              ]
+            }
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 95,
+        title: "Program to Check Prime Number in Python (4 Marks)",
+
+        description: "A prime number is a number greater than 1 that has only two factors: 1 and itself. This program checks whether a given number is prime or not using a function.",
+
+        sections: [
+          {
+            heading: "Program",
+            points: [
+              "<code>def check_prime(n):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;if n <= 1:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return False</code>",
+              "",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;for i in range(2, (n // 2) + 1):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if n % i == 0:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return False</code>",
+              "",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;return True</code>",
+              "",
+              "<code>user_num = int(input('Enter a number: '))</code>",
+              "",
+              "<code>if check_prime(user_num):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Number is prime')</code>",
+              "<code>else:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Number is non-prime')</code>"
+            ]
+          },
+          {
+            heading: "Sample Execution",
+            points: [
+              "Input: 7",
+              "Output: Number is prime"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 96,
+        title: "elif Statement in Python (4 Marks)",
+
+        description: "The elif (short for 'else if') statement is used in Python to check multiple conditions sequentially. If the first if condition is False, Python checks the next elif condition. If all conditions are False, the final else block is executed.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "Used when there are multiple conditions to evaluate.",
+              "Python checks conditions from top to bottom.",
+              "Once a condition becomes True, its block executes and the rest of the conditions are skipped.",
+              "If none of the conditions are True, the else block runs."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>marks = int(input('Enter your marks: '))</code>",
+              "",
+              "<code>if 90 <= marks <= 100:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Grade A')</code>",
+              "<code>elif 80 <= marks < 90:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Grade B')</code>",
+              "<code>elif 70 <= marks < 80:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Grade C')</code>",
+              "<code>else:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Fail')</code>"
+            ]
+          },
+          {
+            heading: "Sample Execution",
+            points: [
+              "Input: 75",
+              "Output: Grade C"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 97,
+        title: "Infinite Loop in Python (4 Marks)",
+
+        description: "An infinite loop is a loop that runs continuously without stopping because its condition never becomes False.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "An infinite loop occurs when the loop condition always remains True.",
+              "This commonly happens in a <code>while</code> loop when the loop variable is not updated properly.",
+              "As a result, the loop keeps executing endlessly unless the program is manually stopped."
+            ]
+          },
+          {
+            heading: "Example of an Infinite Loop",
+            points: [
+              "<code>n = 1</code>",
+              "<code>while n > 0:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print(n)</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;n += 1</code>"
+            ]
+          },
+          {
+            heading: "How to Avoid Infinite Loops",
+            points: [
+              "<b>Update the Variable:</b> Ensure the variable used in the loop condition changes so the condition eventually becomes False.",
+              "<b>Use break Statement:</b> Add a condition inside the loop and use <code>break</code> to exit the loop when a certain limit is reached."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 106,
+        title: "Difference Between Lists and Tuples in Python (4 Marks)",
+
+        description: "Lists and tuples are both used to store multiple elements in Python, but they differ mainly in mutability and usage.",
+
+        sections: [
+          {
+            heading: "Comparison between Lists and Tuples",
+            table: {
+              headers: ["Basis", "Lists", "Tuples"],
+              rows: [
+                [
+                  "Mutability",
+                  "Lists are mutable objects; they can be modified after creation.",
+                  "Tuples are immutable objects; they cannot be modified after creation."
+                ],
+                [
+                  "Representation",
+                  "Represented by square brackets [] with comma-separated elements.",
+                  "Represented by parentheses () with comma-separated elements."
+                ],
+                [
+                  "Modification",
+                  "Elements can be added, deleted, or modified easily.",
+                  "Does not allow addition, deletion, or modification."
+                ],
+                [
+                  "Memory Consumption",
+                  "Consumes more memory compared to tuples.",
+                  "Consumes less memory as the structure is fixed."
+                ],
+                [
+                  "Function Support",
+                  "Supports many functions like sort(), reverse(), append(), extend().",
+                  "Supports limited functions like min(), max(), sum(), count(), len()."
+                ],
+                [
+                  "Example",
+                  "<code>list = [1, 2, 3, 4]</code>",
+                  "<code>tuple = (1, 2, 3, 4)</code>"
+                ]
+              ]
+            }
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 107,
+        title: "Taking Multiple Inputs in a Single Line in Python (4 Marks)",
+
+        description: "Python allows users to take multiple inputs in a single line by using the input() function along with the split() method.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "Use <code>input()</code> to read the entire line as a single string.",
+              "Use <code>.split()</code> to divide the string into smaller parts (usually separated by spaces).",
+              "Use variable unpacking to assign each value to different variables."
+            ]
+          },
+          {
+            heading: "Example 1 (For Strings)",
+            points: [
+              "<code>first_name, last_name = input('Enter first and last name: ').split()</code>"
+            ]
+          },
+          {
+            heading: "Example 2 (For Numbers using map())",
+            points: [
+              "To take multiple integers in one line, we use <code>map()</code> to convert the split strings into integers.",
+              "<code>x, y = map(int, input('Enter two numbers: ').split())</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 108,
+        title: "Program to Calculate Area of a Circle in Python (4 Marks)",
+
+        description: "This program calculates the area of a circle using the radius entered by the user. It uses the value of π (pi) from the math module.",
+
+        sections: [
+          {
+            heading: "Program",
+            points: [
+              "<code>import math</code>",
+              "",
+              "<code>radius = float(input('Enter the radius: '))</code>",
+              "",
+              "<code>area = math.pi * (radius ** 2)</code>",
+              "",
+              "<code>print('The area of the circle is:', round(area, 2))</code>"
+            ]
+          },
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>math</code> module provides the constant value of π (pi).",
+              "The radius is taken as a floating-point input from the user.",
+              "The formula used is: <code>Area = π × r²</code>.",
+              "The <code>round()</code> function is used to display the result up to two decimal places."
+            ]
+          },
+          {
+            heading: "Sample Execution",
+            points: [
+              "Input: 5",
+              "Output: The area of the circle is: 78.54"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 109,
+        title: "pass Statement in Python (4 Marks)",
+
+        description: "The pass statement in Python is a null operation. It acts as a placeholder where a statement is syntactically required but no action needs to be performed.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>pass</code> statement does nothing when executed.",
+              "It is used as a temporary placeholder for future code.",
+              "It is helpful when a block of code is required syntactically (like in <code>if</code>, <code>for</code>, <code>while</code>, or <code>def</code>) but the programmer has not written the logic yet.",
+              "It prevents Python from throwing an <code>IndentationError</code>."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>marks = float(input('Enter your marks: '))</code>",
+              "",
+              "<code>if marks >= 90:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Excellent')</code>",
+              "<code>elif marks >= 50:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;pass</code>",
+              "<code>else:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Fail')</code>"
+            ]
+          },
+          {
+            heading: "Sample Execution",
+            points: [
+              "Input: 65",
+              "Output: (Program runs successfully but prints nothing)"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 110,
+        title: "Modules in Python (4 Marks)",
+
+        description: "A module in Python is a file containing pre-written Python code such as functions, classes, and variables that can be reused in other programs.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "Modules help programmers reuse existing code instead of writing it again.",
+              "They are imported into a program using the <code>import</code> keyword.",
+              "Using modules saves time and makes programs more organized."
+            ]
+          },
+          {
+            heading: "Examples of Built-in Modules",
+            points: [
+              "<b>math module:</b> Used for mathematical calculations.<br><code>math.sqrt()</code>, <code>math.ceil()</code>, <code>math.floor()</code>",
+              "<b>random module:</b> Used to generate random numbers or make random selections.<br><code>random.randint()</code>, <code>random.choice()</code>, <code>random.random()</code>",
+              "<b>statistics module:</b> Used to perform statistical calculations.<br><code>statistics.mean()</code>, <code>statistics.median()</code>, <code>statistics.mode()</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 111,
+        title: "Program to Calculate Simple Interest in Python (4 Marks)",
+
+        description: "This program calculates the Simple Interest based on the principal amount, rate of interest, and time entered by the user.",
+
+        sections: [
+          {
+            heading: "Program",
+            points: [
+              "<code>principal = float(input('Enter the Principal amount: '))</code>",
+              "<code>rate = float(input('Enter the Rate of interest: '))</code>",
+              "<code>time = float(input('Enter the Time in years: '))</code>",
+              "",
+              "<code>simple_interest = (principal * rate * time) / 100</code>",
+              "",
+              "<code>print('The Simple Interest is:', simple_interest)</code>"
+            ]
+          },
+          {
+            heading: "Explanation",
+            points: [
+              "The program takes principal, rate, and time as float inputs from the user.",
+              "It uses the formula: <code>Simple Interest = (Principal × Rate × Time) / 100</code>.",
+              "The calculated simple interest is then displayed using the <code>print()</code> function."
+            ]
+          },
+          {
+            heading: "Sample Execution",
+            points: [
+              "Input: Principal = 1000, Rate = 5, Time = 2",
+              "Output: The Simple Interest is: 100.0"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 112,
+        title: "Dictionary in Python (4 Marks)",
+
+        description: "A dictionary is a built-in Python data structure that stores data in key-value pairs, allowing quick access to values using their keys.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "A dictionary stores data in the form of <b>key-value pairs</b>.",
+              "It allows fast retrieval of data when the key is known.",
+              "Items in a dictionary are enclosed in <code>{ }</code> and separated by commas.",
+              "Each key is separated from its value using a colon <code>:</code>."
+            ]
+          },
+          {
+            heading: "Key Features",
+            points: [
+              "<b>Keys:</b> Must be immutable data types such as strings, integers, or tuples, and must be unique.",
+              "<b>Values:</b> Can be of any data type and can be duplicated.",
+              "Dictionaries can store complex data like lists or even other dictionaries."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>student_data = {</code>",
+              "<code>&nbsp;&nbsp;'name': 'XYZ',</code>",
+              "<code>&nbsp;&nbsp;'age': 18,</code>",
+              "<code>&nbsp;&nbsp;'school': 'R.V. Public School',</code>",
+              "<code>&nbsp;&nbsp;'subjects': ['Hindi', 'English', 'Math']</code>",
+              "<code>}</code>",
+              "",
+              "<code>print(student_data['name'])</code>"
+            ]
+          },
+          {
+            heading: "Output",
+            points: [
+              "XYZ"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 113,
+        title: "None in Python (4 Marks)",
+
+        description: "None is a special keyword and data type in Python that represents the absence of a value or a null value.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "In Python, <code>None</code> represents the complete absence of a value.",
+              "It is a unique object and belongs to the <code>NoneType</code> data type."
+            ]
+          },
+          {
+            heading: "Key Features",
+            points: [
+              "<b>Not Zero:</b> <code>None</code> is different from <code>0</code>, <code>False</code>, or an empty string <code>\"\"</code>. It literally means 'nothing'.",
+              "<b>Checking for None:</b> Since it is a unique object, it should be checked using the <code>is</code> operator (e.g., <code>if value is None:</code>).",
+              "<b>No Operations:</b> Mathematical operations cannot be performed with <code>None</code>; doing so raises a <code>TypeError</code>."
+            ]
+          },
+          {
+            heading: "Common Use Cases",
+            points: [
+              "<b>Default Function Returns:</b> If a function ends without a <code>return</code> statement, Python automatically returns <code>None</code>.",
+              "<b>Variable Initialization:</b> Used as a placeholder when declaring a variable without assigning its actual value yet.",
+              "<b>Dictionary fromkeys():</b> When using <code>dict.fromkeys(list)</code>, Python assigns <code>None</code> as the default value for each key."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 114,
+        title: "Program to Swap Two Variables Without Using a Third Variable (4 Marks)",
+
+        description: "This program swaps the values of two variables without using a temporary variable by using Python's tuple packing and unpacking feature.",
+
+        sections: [
+          {
+            heading: "Program",
+            points: [
+              "<code>num1 = int(input('Enter first number: '))</code>",
+              "<code>num2 = int(input('Enter second number: '))</code>",
+              "",
+              "<code>num1, num2 = num2, num1</code>",
+              "",
+              "<code>print('First number after swapping:', num1)</code>",
+              "<code>print('Second number after swapping:', num2)</code>"
+            ]
+          },
+          {
+            heading: "Explanation",
+            points: [
+              "The program takes two integer inputs from the user.",
+              "Python allows swapping values using tuple packing and unpacking.",
+              "The statement <code>num1, num2 = num2, num1</code> exchanges the values of the two variables without using a temporary variable.",
+              "The swapped values are then displayed using the <code>print()</code> function."
+            ]
+          },
+          {
+            heading: "Sample Execution",
+            points: [
+              "Input: First number = 10, Second number = 20",
+              "Output: First number after swapping: 20",
+              "Second number after swapping: 10"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 115,
+        title: "sep and end Parameters in print() Function (4 Marks)",
+
+        description: "The print() function in Python provides optional parameters like sep and end to control how the output is displayed.",
+
+        sections: [
+          {
+            heading: "1. The sep (Separator) Parameter",
+            points: [
+              "<b>Purpose:</b> It defines the character or string used to separate multiple objects in a single <code>print()</code> statement.",
+              "<b>Default Value:</b> A single space <code>' '</code>.",
+              "<b>Example:</b>",
+              "<code>print('Apple', 'Banana', 'Cherry', sep='---')</code>",
+              "<b>Output:</b> Apple---Banana---Cherry"
+            ]
+          },
+          {
+            heading: "2. The end Parameter",
+            points: [
+              "<b>Purpose:</b> It defines the character or string printed at the end of the output.",
+              "<b>Default Value:</b> A newline character <code>'\\n'</code>, which moves the cursor to the next line.",
+              "<b>Example:</b>",
+              "<code>print('Hello', end='***')</code>",
+              "<code>print('World')</code>",
+              "<b>Output:</b> Hello***World"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 116,
+        title: "Exception Handling in Python (4 Marks)",
+
+        description: "Exception handling in Python is used to manage runtime errors and prevent the program from crashing by using try and except blocks.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "In Python, runtime errors are called <b>exceptions</b>.",
+              "If an exception occurs, the program may stop abruptly.",
+              "To handle such situations and keep the program running smoothly, Python provides <b>Exception Handling</b> using <code>try-except</code> blocks."
+            ]
+          },
+          {
+            heading: "Key Components",
+            points: [
+              "<b>try block:</b> Contains the code that may produce an error.",
+              "<b>except block:</b> Executes when an error occurs in the try block, preventing the program from crashing.",
+              "<b>finally block (optional):</b> Contains code that will always execute whether an exception occurs or not."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>try:</code>",
+              "<code>&nbsp;&nbsp;result = 10 / 0</code>",
+              "<code>except ZeroDivisionError:</code>",
+              "<code>&nbsp;&nbsp;print('Error: You cannot divide a number by zero.')</code>"
+            ]
+          },
+          {
+            heading: "Output",
+            points: [
+              "Error: You cannot divide a number by zero."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 117,
+        title: "Syntax Error in Python (4 Marks)",
+
+        description: "A Syntax Error occurs when the rules or grammar of the Python programming language are violated, preventing the program from running.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "A Syntax Error happens when a programmer writes code that does not follow Python’s grammatical rules.",
+              "The Python interpreter detects these errors before the program starts executing."
+            ]
+          },
+          {
+            heading: "Key Features",
+            points: [
+              "<b>Parsing Phase:</b> Syntax errors are detected during the parsing stage before execution.",
+              "<b>Execution Blocked:</b> If a syntax error exists, the program will not run until the error is corrected."
+            ]
+          },
+          {
+            heading: "Common Examples",
+            points: [
+              "Missing a colon <code>:</code> at the end of an <code>if</code> statement.",
+              "Unmatched or extra brackets such as <code>()</code>, <code>[]</code>, or <code>{}</code>.",
+              "Misspelling Python keywords (e.g., writing <code>impart</code> instead of <code>import</code>)."
+            ]
+          },
+          {
+            heading: "Python Code Example",
+            points: [
+              "<code># Syntax Error 1: Missing closing parenthesis</code>",
+              "<code>print('Hello World'</code>",
+              "",
+              "<code># Syntax Error 2: Missing colon</code>",
+              "<code>if 5 > 2</code>",
+              "<code>&nbsp;&nbsp;print('Yes')</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 118,
+        title: "Program to Check Palindrome String in Python (4 Marks)",
+
+        description: "A palindrome is a word or string that reads the same forwards and backwards. A Python program can check this by comparing characters from the beginning and the end of the string.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "A palindrome is a word that reads the same both forward and backward (e.g., <code>radar</code>, <code>level</code>).",
+              "The program compares characters from the start and end of the string simultaneously.",
+              "If any pair of characters does not match, the string is not a palindrome."
+            ]
+          },
+          {
+            heading: "Python Program",
+            points: [
+              "<code>text = input('Enter a string: ')</code>",
+              "",
+              "<code>i = 0</code>",
+              "<code>j = len(text) - 1</code>",
+              "<code>is_palindrome = True</code>",
+              "",
+              "<code>while i <= j:</code>",
+              "<code>&nbsp;&nbsp;if text[i] != text[j]:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;is_palindrome = False</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;break</code>",
+              "<code>&nbsp;&nbsp;i += 1</code>",
+              "<code>&nbsp;&nbsp;j -= 1</code>",
+              "",
+              "<code>if is_palindrome:</code>",
+              "<code>&nbsp;&nbsp;print('Given string is a Palindrome')</code>",
+              "<code>else:</code>",
+              "<code>&nbsp;&nbsp;print('NOT A Palindrome')</code>"
+            ]
+          },
+          {
+            heading: "Sample Execution",
+            points: [
+              "Input: madam",
+              "Output: Given string is a Palindrome"
+            ]
+          },
+          {
+            heading: "Pro Tip",
+            points: [
+              "In Python, palindrome can also be checked using string slicing:",
+              "<code>if text == text[::-1]:</code>",
+              "<code>&nbsp;&nbsp;print('Palindrome')</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 118,
+        title: "Program to Check Palindrome String in Python (4 Marks)",
+
+        description: "A palindrome is a word or string that reads the same forwards and backwards. A Python program can check this by comparing characters from the beginning and the end of the string.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "A palindrome is a word that reads the same both forward and backward (e.g., <code>radar</code>, <code>level</code>).",
+              "The program compares characters from the start and end of the string simultaneously.",
+              "If any pair of characters does not match, the string is not a palindrome."
+            ]
+          },
+          {
+            heading: "Python Program",
+            points: [
+              "<code>text = input('Enter a string: ')</code>",
+              "",
+              "<code>i = 0</code>",
+              "<code>j = len(text) - 1</code>",
+              "<code>is_palindrome = True</code>",
+              "",
+              "<code>while i <= j:</code>",
+              "<code>&nbsp;&nbsp;if text[i] != text[j]:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;is_palindrome = False</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;break</code>",
+              "<code>&nbsp;&nbsp;i += 1</code>",
+              "<code>&nbsp;&nbsp;j -= 1</code>",
+              "",
+              "<code>if is_palindrome:</code>",
+              "<code>&nbsp;&nbsp;print('Given string is a Palindrome')</code>",
+              "<code>else:</code>",
+              "<code>&nbsp;&nbsp;print('NOT A Palindrome')</code>"
+            ]
+          },
+          {
+            heading: "Sample Execution",
+            points: [
+              "Input: madam",
+              "Output: Given string is a Palindrome"
+            ]
+          },
+          {
+            heading: "Pro Tip",
+            points: [
+              "In Python, palindrome can also be checked using string slicing:",
+              "<code>if text == text[::-1]:</code>",
+              "<code>&nbsp;&nbsp;print('Palindrome')</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 119,
+        title: "Error Handling using try and except in Python (4 Marks)",
+
+        description: "Error handling in Python is performed using try and except blocks to prevent the program from crashing when an error occurs.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "In Python, errors during program execution are handled using <code>try</code> and <code>except</code> blocks.",
+              "This technique is called <b>Exception Handling</b> and it allows the program to continue running even if an error occurs."
+            ]
+          },
+          {
+            heading: "try Block",
+            points: [
+              "The <code>try</code> block contains the risky code that might generate an error.",
+              "Python executes the code inside this block line by line.",
+              "If an error occurs, Python immediately stops executing the remaining lines and jumps to the <code>except</code> block."
+            ]
+          },
+          {
+            heading: "except Block",
+            points: [
+              "The <code>except</code> block acts as a handler for the error.",
+              "It runs only when an error occurs inside the <code>try</code> block.",
+              "This prevents the program from crashing and allows it to continue execution."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>try:</code>",
+              "<code>&nbsp;&nbsp;result = 10 / 0</code>",
+              "<code>except ZeroDivisionError:</code>",
+              "<code>&nbsp;&nbsp;print('Math Error: You cannot divide by zero.')</code>"
+            ]
+          },
+          {
+            heading: "Output",
+            points: [
+              "Math Error: You cannot divide by zero."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 120,
+        title: "Algorithm to Check Palindrome (4 Marks)",
+
+        description: "A palindrome is a word, number, or sequence that reads the same forwards and backwards.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "A palindrome is a sequence that remains the same when read from left to right and right to left.",
+              "Examples include <code>radar</code>, <code>madam</code>, and <code>12321</code>."
+            ]
+          },
+          {
+            heading: "Algorithm (Two-Pointer Approach)",
+            points: [
+              "<b>Step 1:</b> Accept a sequence (string or number) from the user.",
+              "<b>Step 2:</b> Set two pointers: <code>i = 0</code> (start) and <code>j = length of sequence - 1</code> (end).",
+              "<b>Step 3:</b> Repeat while <code>i &lt; j</code>.",
+              "<b>Step 4:</b> Compare characters at index <code>i</code> and <code>j</code>.",
+              "If they are not equal, print <b>'Not a Palindrome'</b> and stop the algorithm.",
+              "<b>Step 5:</b> If they are equal, increment <code>i</code> by 1 and decrement <code>j</code> by 1.",
+              "<b>Step 6:</b> If the loop finishes without finding a mismatch, print <b>'It is a Palindrome'</b>."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 121,
+        title: "Membership Operator 'in' in Python (4 Marks)",
+
+        description: "In Python, the 'in' operator is a membership operator used to check whether a value exists within a sequence such as a string, list, or tuple.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>in</code> operator checks whether a particular value exists inside a sequence.",
+              "It returns a Boolean value: <code>True</code> if the item is found and <code>False</code> if it is not found."
+            ]
+          },
+          {
+            heading: "Usage with Strings",
+            points: [
+              "When used with strings, it checks if a character or substring exists anywhere within the string.",
+              "<code>'pro' in 'program'</code> → True",
+              "<code>'z' in 'hello'</code> → False"
+            ]
+          },
+          {
+            heading: "Usage with Lists",
+            points: [
+              "When used with lists, it checks if an exact element exists as an item in the list.",
+              "<code>10 in [5, 10, 15, 20]</code> → True",
+              "<code>'apple' in ['banana', 'orange']</code> → False"
+            ]
+          },
+          {
+            heading: "Examples in Python Shell",
+            points: [
+              "<code>>> 'pro' in 'program'</code>",
+              "<code>True</code>",
+              "",
+              "<code>>> 'z' in 'hello'</code>",
+              "<code>False</code>",
+              "",
+              "<code>>> 10 in [5, 10, 15, 20]</code>",
+              "<code>True</code>",
+              "",
+              "<code>>> 'apple' in ['banana', 'orange']</code>",
+              "<code>False</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 122,
+        title: "Membership Operator 'not in' in Python (4 Marks)",
+
+        description: "In Python, the 'not in' operator is a membership operator used to check whether a value does NOT exist within a sequence such as a string, list, or tuple.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>not in</code> operator checks whether a particular value is missing from a sequence.",
+              "It is the opposite of the <code>in</code> operator.",
+              "It returns <code>True</code> if the item is not found and <code>False</code> if the item exists in the sequence."
+            ]
+          },
+          {
+            heading: "Usage with Lists",
+            points: [
+              "It checks whether an element does not exist in a list.",
+              "<code>10 not in [1, 2, 3]</code> → True",
+              "<code>2 not in [1, 2, 3]</code> → False"
+            ]
+          },
+          {
+            heading: "Usage with Strings",
+            points: [
+              "It checks whether a character or substring is not present in the string.",
+              "<code>'z' not in 'hello'</code> → True"
+            ]
+          },
+          {
+            heading: "Examples in Python Shell",
+            points: [
+              "<code>>> 10 not in [1, 2, 3]</code>",
+              "<code>True</code>",
+              "",
+              "<code>>> 2 not in [1, 2, 3]</code>",
+              "<code>False</code>",
+              "",
+              "<code>>> 'z' not in 'hello'</code>",
+              "<code>True</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 123,
+        title: "Slicing in Python (4 Marks)",
+
+        description: "Slicing is a feature in Python used to extract a specific portion of a sequence such as a string, list, or tuple.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "Slicing allows us to obtain a subsequence from a sequence like a string, list, or tuple.",
+              "It helps in accessing specific parts of the data easily."
+            ]
+          },
+          {
+            heading: "Syntax",
+            points: [
+              "<code>sequence[start : stop : step]</code>",
+              "<b>start:</b> Starting index (included). Default value is <code>0</code>.",
+              "<b>stop:</b> Ending index (excluded). Default value is the length of the sequence.",
+              "<b>step:</b> The interval between elements. Default value is <code>1</code>."
+            ]
+          },
+          {
+            heading: "Examples with Strings",
+            points: [
+              "<code>text = 'Computer'</code>",
+              "",
+              "<code># Basic slice</code>",
+              "<code>print(text[0:4])</code>  → Output: <b>Comp</b>",
+              "",
+              "<code># Using step</code>",
+              "<code>print(text[0:6:2])</code>  → Output: <b>Cmu</b>",
+              "",
+              "<code># Reversing a string</code>",
+              "<code>print(text[::-1])</code>  → Output: <b>retupmoC</b>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 124,
+        title: "Finding Length of a String in Python (4 Marks)",
+
+        description: "The length of a string means the total number of characters present in the string.",
+
+        sections: [
+          {
+            heading: "Method 1: Using Built-in len() Function",
+            points: [
+              "Python provides a built-in function <code>len()</code> to find the number of characters in a string.",
+              "<code>text = 'Sameer'</code>",
+              "<code>print(len(text))</code> → Output: <b>6</b>"
+            ]
+          },
+          {
+            heading: "Method 2: Using a for Loop (Algorithmic Method)",
+            points: [
+              "We can manually count characters by looping through each character of the string.",
+              "<code>text = 'Sameer'</code>",
+              "<code>count = 0</code>",
+              "<code>for char in text:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;count += 1</code>",
+              "<code>print('Length:', count)</code> → Output: <b>Length: 6</b>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 125,
+        title: "Program to Count Vowels in a String (4 Marks)",
+
+        description: "This program counts the total number of vowels present in a user-entered string.",
+
+        sections: [
+          {
+            heading: "Python Program",
+            points: [
+              "<code>text = input('Enter string: ')</code>",
+              "<code>count = 0</code>",
+              "<code>vowels = 'aeiouAEIOU'</code>  # Search set",
+              "",
+              "<code>for char in text:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;if char in vowels:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count += 1</code>",
+              "",
+              "<code>print('Total Vowels:', count)</code>"
+            ]
+          },
+          {
+            heading: "Algorithm",
+            points: [
+              "<b>Step 1:</b> Input a string from the user.",
+              "<b>Step 2:</b> Initialize <code>count = 0</code> and define a string containing vowels.",
+              "<b>Step 3:</b> Iterate through each character in the string.",
+              "<b>Step 4:</b> If the character exists in the vowel string, increment <code>count</code> by 1.",
+              "<b>Step 5:</b> Display the final value of <code>count</code>."
+            ]
+          },
+          {
+            heading: "Example Output",
+            points: [
+              "<code>Enter string: Education</code>",
+              "<code>Total Vowels: 5</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      },
+      {
+        id: 127,
+        title: "strip() Method in Python (4 Marks)",
+
+        description: "The strip() method is a built-in string method used to remove whitespace characters from the beginning and end of a string.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>strip()</code> method removes leading (start) and trailing (end) whitespace characters.",
+              "Whitespace characters include spaces, tabs, and newline characters.",
+              "It does not remove spaces that appear inside the string."
+            ]
+          },
+          {
+            heading: "Syntax",
+            points: [
+              "<code>new_string = original_string.strip()</code>"
+            ]
+          },
+          {
+            heading: "Example",
+            points: [
+              "<code>text = '   Python Programming   '</code>",
+              "<code># Visualizing: [   ]Python Programming[   ]</code>",
+              "<code>print(text.strip())</code>",
+              "",
+              "<code># Output:</code>",
+              "<code>Python Programming</code>"
+            ]
+          },
+          {
+            heading: "Related Methods",
+            points: [
+              "<b>strip()</b> → Removes spaces from both the beginning and end of the string.",
+              "<b>lstrip()</b> → Removes spaces from the left (start) side only.",
+              "<b>rstrip()</b> → Removes spaces from the right (end) side only."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 128,
+        title: "Convert Lowercase to Uppercase in Python (4 Marks)",
+
+        description: "A string can be converted from lowercase to uppercase using built-in methods or by applying a manual algorithm.",
+
+        sections: [
+          {
+            heading: "Method 1: Using .upper() (Built-in Method)",
+            points: [
+              "The <code>.upper()</code> method returns a new string with all lowercase characters converted to uppercase.",
+              "<code>text = 'python 3.0'</code>",
+              "<code>print(text.upper())</code>",
+              "<code># Output: PYTHON 3.0</code>"
+            ]
+          },
+          {
+            heading: "Method 2: Manual Dictionary Mapping (Algorithmic Method)",
+            points: [
+              "Each character is checked against a dictionary that maps lowercase letters to uppercase letters.",
+              "<code>text = 'abc'</code>",
+              "<code>map_dict = {'a':'A', 'b':'B', 'c':'C'}</code>",
+              "<code>result = ''</code>",
+              "",
+              "<code>for char in text:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;result += map_dict.get(char, char)</code>",
+              "",
+              "<code>print(result)</code>",
+              "<code># Output: ABC</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 129,
+        title: "Reverse a String in Python (4 Marks)",
+
+        description: "A string can be reversed in Python using a manual loop method or by using slicing.",
+
+        sections: [
+          {
+            heading: "Method 1: Using a for Loop (Manual Method)",
+            points: [
+              "<code>text = input('Enter string: ')</code>",
+              "<code>reversed_text = ''</code>  # Initialize empty string",
+              "",
+              "<code>for i in range(len(text)-1, -1, -1):</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;reversed_text += text[i]</code>",
+              "",
+              "<code>print('Reversed:', reversed_text)</code>",
+              "<code># Example Output for 'Dog': goD</code>"
+            ]
+          },
+          {
+            heading: "Method 2: Using Slicing (Optimized Method)",
+            points: [
+              "Python slicing can reverse a string efficiently using a negative step.",
+              "<code>text = 'Python'</code>",
+              "<code>print(text[::-1])</code>",
+              "<code># Output: nohtyP</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 130,
+        title: "Difference Between append() and extend() in Python Lists (4 Marks)",
+
+        description: "Both append() and extend() are list methods used to add elements to a list, but they behave differently when adding another list.",
+
+        sections: [
+          {
+            heading: "Comparison Table",
+            table: {
+              headers: ["Feature", "append(item)", "extend(iterable)"],
+              rows: [
+                [
+                  "Purpose",
+                  "Adds a single element to the end of the list.",
+                  "Adds all elements of another iterable to the list."
+                ],
+                [
+                  "List Behavior",
+                  "If a list is passed, it is added as a nested list.",
+                  "If a list is passed, its elements are added individually."
+                ],
+                [
+                  "Modification",
+                  "Modifies the original list in-place.",
+                  "Modifies the original list in-place."
+                ]
+              ]
+            }
+          },
+          {
+            heading: "Example Code",
+            points: [
+              "<code>L1 = [1, 2]</code>",
+              "<code>L2 = [3, 4]</code>",
+              "",
+              "<code># Using append</code>",
+              "<code>L1.append(L2)</code>",
+              "<code># Result: [1, 2, [3, 4]]</code>",
+              "",
+              "<code># Using extend</code>",
+              "<code>L1.extend(L2)</code>",
+              "<code># Result: [1, 2, 3, 4]</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 131,
+        title: "Difference Between remove() and pop() in Python Lists (4 Marks)",
+
+        description: "Both remove() and pop() are list methods used to delete elements from a list, but they differ in how they identify and return elements.",
+
+        sections: [
+          {
+            heading: "Comparison Table",
+            table: {
+              headers: ["Feature", "remove(value)", "pop(index)"],
+              rows: [
+                [
+                  "Search by",
+                  "Searches for a specific value in the list.",
+                  "Removes element based on a specific index."
+                ],
+                [
+                  "Return Value",
+                  "Returns None.",
+                  "Returns the deleted element."
+                ],
+                [
+                  "Default Behavior",
+                  "No default; the value must be provided.",
+                  "Removes the last item if no index is given."
+                ],
+                [
+                  "Error",
+                  "Raises ValueError if the value is not found.",
+                  "Raises IndexError if the index is out of range."
+                ]
+              ]
+            }
+          },
+          {
+            heading: "Example Code",
+            points: [
+              "<code>nums = [10, 20, 30, 20]</code>",
+              "",
+              "<code># remove deletes the first matching value</code>",
+              "<code>nums.remove(20)</code>",
+              "<code># nums becomes [10, 30, 20]</code>",
+              "",
+              "<code># pop deletes and returns element at index</code>",
+              "<code>val = nums.pop(0)</code>",
+              "",
+              "<code>print(val)</code>  # Output: 10",
+              "<code>print(nums)</code> # Output: [30, 20]"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 132,
+        title: "Program to Find the Largest Element in a List (4 Marks)",
+
+        description: "The largest element in a list can be found either by manually comparing elements using a loop or by using Python’s built-in max() function.",
+
+        sections: [
+          {
+            heading: "Method 1: Using a Loop (Manual Comparison)",
+            points: [
+              "<code>nums = list(map(int, input('Enter numbers: ').split()))</code>",
+              "",
+              "<code>largest = nums[0]</code>  # Assume first element is largest",
+              "",
+              "<code>for x in nums:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;if x > largest:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;largest = x</code>",
+              "",
+              "<code>print('The largest number is:', largest)</code>"
+            ]
+          },
+          {
+            heading: "Method 2: Using Built-in max() Function",
+            points: [
+              "<code>nums = list(map(int, input('Enter numbers: ').split()))</code>",
+              "",
+              "<code>largest = max(nums)</code>",
+              "",
+              "<code>print('The largest number is:', largest)</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 133,
+        title: "Difference Between remove() and pop() in Python Lists (4 Marks)",
+
+        description: "Both remove() and pop() are list methods used to delete elements from a list, but they work in different ways.",
+
+        sections: [
+          {
+            heading: "Comparison Table",
+            table: {
+              headers: ["Feature", "remove(value)", "pop(index)"],
+              rows: [
+                [
+                  "Search by",
+                  "Removes an element based on its value.",
+                  "Removes an element based on its index position."
+                ],
+                [
+                  "Return Value",
+                  "Returns None after deleting the element.",
+                  "Returns the deleted element."
+                ],
+                [
+                  "Default Behavior",
+                  "Value must be provided as argument.",
+                  "Removes the last element if no index is given."
+                ],
+                [
+                  "Error",
+                  "Raises ValueError if the value is not found.",
+                  "Raises IndexError if the index is out of range."
+                ]
+              ]
+            }
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>nums = [10, 20, 30, 20]</code>",
+              "",
+              "<code># remove deletes the first occurrence of 20</code>",
+              "<code>nums.remove(20)</code>",
+              "<code># nums becomes [10, 30, 20]</code>",
+              "",
+              "<code># pop deletes and returns element at index 0</code>",
+              "<code>val = nums.pop(0)</code>",
+              "",
+              "<code>print(val)</code>  # Output: 10",
+              "<code>print(nums)</code> # Output: [30, 20]"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 134,
+        title: "Adding Key–Value Pairs in a Python Dictionary (4 Marks)",
+
+        description: "New key–value pairs can be added to a dictionary using direct assignment or the update() method.",
+
+        sections: [
+          {
+            heading: "1. Direct Assignment (Using Square Brackets)",
+            points: [
+              "This method is used to add a single key–value pair to a dictionary.",
+              "<code>d = {'name': 'Arun'}</code>",
+              "<code>d['age'] = 25</code>",
+              "<code># Result: {'name': 'Arun', 'age': 25}</code>"
+            ]
+          },
+          {
+            heading: "2. Using update() Method",
+            points: [
+              "The <code>update()</code> method is used to add multiple key–value pairs or merge another dictionary.",
+              "<code>d.update({'city': 'Delhi', 'job': 'Dev'})</code>",
+              "<code># Result: {'name': 'Arun', 'age': 25, 'city': 'Delhi', 'job': 'Dev'}</code>"
+            ]
+          },
+          {
+            heading: "Important Rule",
+            points: [
+              "If a key already exists in the dictionary, the new value will overwrite the old value."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 135,
+        title: "Merging Dictionaries in Python (4 Marks)",
+
+        description: "Dictionaries in Python can be merged by combining key–value pairs from one dictionary into another.",
+
+        sections: [
+          {
+            heading: "Method: Using update() Method (In-place)",
+            points: [
+              "The <code>update()</code> method merges another dictionary into the existing dictionary.",
+              "It modifies the original dictionary directly (in-place).",
+              "<code>d1 = {1: 'A', 2: 'B'}</code>",
+              "<code>d2 = {2: 'C', 3: 'D'}</code>",
+              "",
+              "<code>d1.update(d2)</code>",
+              "<code>print(d1)</code>",
+              "<code># Output: {1: 'A', 2: 'C', 3: 'D'}</code>"
+            ]
+          },
+          {
+            heading: "Key Observation",
+            points: [
+              "If both dictionaries contain the same key, the value from the second (right-side) dictionary overwrites the value in the first dictionary."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 136,
+        title: "update() Method in Python Dictionary (4 Marks)",
+
+        description: "The update() method is used to merge one dictionary into another by adding or updating key–value pairs.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>update()</code> method adds key–value pairs from one dictionary to another.",
+              "It modifies the original dictionary directly (in-place).",
+              "If a key already exists, its value is replaced by the new value."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>d1 = {'A': 1, 'B': 2}</code>",
+              "<code>d2 = {'B': 3, 'C': 4}</code>",
+              "",
+              "<code>d1.update(d2)</code>",
+              "<code>print(d1)</code>",
+              "",
+              "<code># Output: {'A': 1, 'B': 3, 'C': 4}</code>"
+            ]
+          },
+          {
+            heading: "Important Note",
+            points: [
+              "If both dictionaries contain the same key, the value from the second dictionary overwrites the existing value."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 140,
+        title: "Tuples and Immutability in Python (4 Marks)",
+
+        description: "A tuple is an ordered and immutable sequence used to store multiple elements in Python.",
+
+        sections: [
+          {
+            heading: "Tuple – Definition",
+            points: [
+              "<b>Sequence:</b> A tuple is an ordered collection of elements.",
+              "<b>Heterogeneous:</b> It can store elements of different data types such as integers, strings, and floats.",
+              "<b>Immutable:</b> Once a tuple is created, its elements cannot be modified."
+            ]
+          },
+          {
+            heading: "Operations on Tuples",
+            points: [
+              "Tuples do not support addition, deletion, or updating of elements.",
+              "They support operations like <b>concatenation</b>, <b>repetition</b>, <b>membership</b>, and <b>slicing</b>."
+            ]
+          },
+          {
+            heading: "Common Tuple Functions",
+            points: [
+              "<code>len()</code>, <code>count()</code>, <code>sum()</code>, <code>min()</code>, <code>max()</code>, <code>index()</code>"
+            ]
+          },
+          {
+            heading: "Creation of Tuple",
+            points: [
+              "Tuples are created using parentheses with comma-separated values.",
+              "<code>t = (1, 2, 3, 4, 5)</code>",
+              "<code>t = ('Reema',)</code>  # Single element tuple requires a comma"
+            ]
+          },
+          {
+            heading: "Why Tuples are Immutable",
+            points: [
+              "Ensures data integrity (data cannot be changed accidentally).",
+              "Provides better performance because tuples are fixed in size.",
+              "More memory-efficient compared to lists.",
+              "Can be used as keys in dictionaries because they are immutable."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 141,
+        title: "Creating a Set from a List in Python (4 Marks)",
+
+        description: "A set can be created from a list using the set() constructor, which automatically removes duplicate elements.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>set()</code> constructor converts a list into a set.",
+              "It is commonly used to remove duplicate values from a list.",
+              "A set stores only unique elements."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code># List with duplicate values</code>",
+              "<code>my_list = [10, 20, 10, 30, 20]</code>",
+              "",
+              "<code># Convert list to set</code>",
+              "<code>unique_nums = set(my_list)</code>",
+              "",
+              "<code>print(unique_nums)</code>",
+              "<code># Output: {10, 20, 30}</code>"
+            ]
+          },
+          {
+            heading: "Key Property of Sets",
+            points: [
+              "Sets are <b>unordered</b> collections.",
+              "They store only <b>unique elements</b> (no duplicates allowed).",
+              "The order of elements in the output may vary."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 142,
+        title: "Program to Find the Union of Two Sets (4 Marks)",
+
+        description: "The union of two sets contains all unique elements that appear in either of the sets.",
+
+        sections: [
+          {
+            heading: "Python Program",
+            points: [
+              "<code>s1 = set(map(int, input('Enter comma separated values of first set: ').split(',')))</code>",
+              "<code>s2 = set(map(int, input('Enter comma separated values of second set: ').split(',')))</code>",
+              "",
+              "<code>union_set = s1 | s2</code>",
+              "<code>print(union_set)</code>"
+            ]
+          },
+          {
+            heading: "Explanation",
+            points: [
+              "The operator <code>|</code> is used to perform the <b>union</b> operation on two sets.",
+              "It returns a new set containing all unique elements from both sets.",
+              "Duplicate values are automatically removed because sets store only unique elements."
+            ]
+          },
+          {
+            heading: "Example Input / Output",
+            points: [
+              "<b>Input:</b>",
+              "First Set: 1,2,3,4,4,5,5,5,6,7",
+              "Second Set: 4,4,5,5,6,6,6,7,7,12,15,9,8,13",
+              "",
+              "<b>Output:</b>",
+              "{1, 2, 3, 4, 5, 6, 7, 12, 15, 9, 8, 13}"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 143,
+        title: "Recursion in Python (4 Marks)",
+
+        description: "Recursion is a programming technique in which a function calls itself to solve smaller instances of the same problem.",
+
+        sections: [
+          {
+            heading: "Key Features of Recursion",
+            points: [
+              "<b>Function Calls Itself:</b> Recursion can only be implemented through functions where the function calls itself.",
+              "<b>Base Case:</b> A stopping condition that terminates the recursion.",
+              "<b>Recursive Step:</b> The function calls itself with a smaller or simpler input to gradually reach the base case."
+            ]
+          },
+          {
+            heading: "Example: Factorial Using Recursion",
+            points: [
+              "<code>def fact(n):</code>",
+              "<code>    if n <= 1:</code>",
+              "<code>        return 1  # Base condition</code>",
+              "<code>    return n * fact(n-1)</code>"
+            ]
+          },
+          {
+            heading: "Sample Execution",
+            points: [
+              "<b>Input:</b> 5",
+              "<b>Output:</b> 120"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 152,
+        title: "Global and Local Variables in Python (4 Marks)",
+
+        description: "Variables in Python are classified based on where they are declared and where they can be accessed in a program.",
+
+        sections: [
+          {
+            heading: "Global Variables",
+            points: [
+              "<b>Definition:</b> Global variables store data that can be accessed throughout the entire program.",
+              "<b>Definition Place:</b> They are usually defined outside all functions at the top of the program.",
+              "<b>Scope:</b> They have global scope and can be accessed anywhere in the program.",
+              "<b>Modification:</b> To modify a global variable inside a function, the <code>global</code> keyword must be used."
+            ]
+          },
+          {
+            heading: "Local Variables",
+            points: [
+              "<b>Definition:</b> Local variables store data that can be accessed only within the block or function where they are defined.",
+              "<b>Definition Place:</b> They are defined inside a function or block.",
+              "<b>Scope:</b> They have local scope and cannot be accessed outside their function.",
+              "<b>Modification:</b> They can be modified only within their local scope."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>x = 10  # Global variable</code>",
+              "",
+              "<code>def my_func():</code>",
+              "<code>&nbsp;&nbsp;y = 5  # Local variable</code>",
+              "<code>&nbsp;&nbsp;print(x)  # Global variable is accessible</code>",
+              "",
+              "<code>my_func()</code>",
+              "<code>print(y)</code>  # Error: NameError (y is not defined outside the function)"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 153,
+        title: "global Keyword in Python (4 Marks)",
+
+        description: "The global keyword is used inside a function to modify a variable that is defined in the global scope.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>global</code> keyword allows a function to access and modify a variable defined outside the function.",
+              "Without using <code>global</code>, Python treats the variable as a new local variable when assignment occurs."
+            ]
+          },
+          {
+            heading: "Why Use global?",
+            points: [
+              "To prevent Python from creating a new local variable during assignment.",
+              "To update or modify a global variable from within a function."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>score = 0</code>",
+              "",
+              "<code>def add_point():</code>",
+              "<code>&nbsp;&nbsp;global score</code>",
+              "<code>&nbsp;&nbsp;score += 1</code>",
+              "",
+              "<code>add_point()</code>",
+              "<code>print(score)</code>",
+              "",
+              "<code># Output: 1</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 154,
+        title: "Scope of a Variable in Python (4 Marks)",
+
+        description: "Scope refers to the region of a program where a variable can be accessed or modified.",
+
+        sections: [
+          {
+            heading: "Types of Variable Scope",
+            table: {
+              headers: ["Scope Type", "Description"],
+              rows: [
+                [
+                  "Global Scope",
+                  "Variable defined outside any function. It can be accessed from anywhere in the program."
+                ],
+                [
+                  "Local Scope",
+                  "Variable defined inside a function. It can only be accessed within that specific function."
+                ]
+              ]
+            }
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>user = 'Admin'  # Global Scope</code>",
+              "",
+              "<code>def show_name():</code>",
+              "<code>&nbsp;&nbsp;age = 25  # Local Scope</code>",
+              "<code>&nbsp;&nbsp;print(user)  # Accessing global variable</code>",
+              "<code>&nbsp;&nbsp;print(age)   # Accessing local variable</code>",
+              "",
+              "<code>show_name()</code>",
+              "<code>print(user)</code>  # Works because it is global",
+              "<code># print(age)</code> # ERROR: NameError (age is local to the function)"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 155,
+        title: "Passing Lists to Functions in Python (4 Marks)",
+
+        description: "Lists can be passed as arguments to functions by placing the list variable inside the parentheses during the function call.",
+
+        sections: [
+          {
+            heading: "Key Behavior (Pass by Object Reference)",
+            points: [
+              "Lists are <b>mutable</b> objects in Python.",
+              "When a list is passed to a function, Python passes the <b>reference to the same memory location</b>.",
+              "Any modification made to the list inside the function will also affect the original list."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>def update_list(my_list):</code>",
+              "<code>&nbsp;&nbsp;my_list[0] = 100</code>  # Modifies original list",
+              "",
+              "<code>nums = [1, 2, 3]</code>",
+              "<code>update_list(nums)</code>",
+              "<code>print(nums)</code>",
+              "",
+              "<code># Output: [100, 2, 3]</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 156,
+        title: "Use of return None in Python (4 Marks)",
+
+        description: "In Python, None represents the absence of a value. If a function does not return anything explicitly, Python automatically returns None.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "<code>None</code> is a special value that represents no value or null.",
+              "If a function does not contain a <code>return</code> statement, Python automatically returns <code>None</code>.",
+              "Programmers sometimes use <code>return None</code> to exit a function early when a condition is not valid."
+            ]
+          },
+          {
+            heading: "Additional Note",
+            points: [
+              "Many built-in methods that modify objects in-place (such as <code>list.sort()</code>) return <code>None</code> instead of a new value."
+            ]
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>def check_age(age):</code>",
+              "<code>&nbsp;&nbsp;if age &lt; 0:</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;print('Invalid age')</code>",
+              "<code>&nbsp;&nbsp;&nbsp;&nbsp;return None</code>",
+              "<code>&nbsp;&nbsp;print('Age is', age)</code>",
+              "",
+              "<code>result = check_age(-5)</code>",
+              "<code>print(result)</code>",
+              "",
+              "<code># Output:</code>",
+              "<code># Invalid age</code>",
+              "<code># None</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 157,
+        title: "Reading a File in Python (4 Marks)",
+
+        description: "In Python, a file must first be opened using the open() function before it can be read.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "Files are opened using the <code>open()</code> function.",
+              "It is recommended to use a <code>with</code> statement (context manager) so the file automatically closes after use.",
+              "The file must be opened in <code>'r'</code> mode for reading."
+            ]
+          },
+          {
+            heading: "Common File Reading Methods",
+            table: {
+              headers: ["Method", "Description", "Return Type"],
+              rows: [
+                [
+                  "read()",
+                  "Reads the entire file or specified number of bytes.",
+                  "Single string (str)"
+                ],
+                [
+                  "readline()",
+                  "Reads one line from the file at a time.",
+                  "Single string (str)"
+                ],
+                [
+                  "readlines()",
+                  "Reads all lines of the file at once.",
+                  "List of strings"
+                ]
+              ]
+            }
+          },
+          {
+            heading: "Example Program (Best Practice)",
+            points: [
+              "<code># Using 'with' automatically closes the file</code>",
+              "<code>with open('data.txt', 'r') as file:</code>",
+              "<code>&nbsp;&nbsp;content = file.read()</code>",
+              "<code>&nbsp;&nbsp;print(content)</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 158,
+        title: "The with Statement (Context Manager) in Python (4 Marks)",
+
+        description: "The with statement is used in Python file handling to manage resources efficiently. It acts as a Context Manager and automatically handles opening and closing of files.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>with</code> statement is used when working with files to ensure proper resource management.",
+              "It acts as a <b>Context Manager</b> that automatically handles file closing after the block of code finishes execution."
+            ]
+          },
+          {
+            heading: "Key Benefits",
+            points: [
+              "<b>Automatic Cleanup:</b> The file is automatically closed when the code block ends.",
+              "<b>Exception Safety:</b> Even if an error or exception occurs inside the block, the file will still be closed safely."
+            ]
+          },
+          {
+            heading: "Example: Modern vs Legacy Method",
+            points: [
+              "<code># Modern Approach (Using 'with')</code>",
+              "<code>with open('data.txt', 'r') as file:</code>",
+              "<code>&nbsp;&nbsp;content = file.read()</code>",
+              "<code># File automatically closes after this block</code>",
+              "",
+              "<code># Legacy Approach</code>",
+              "<code>file = open('data.txt', 'r')</code>",
+              "<code>content = file.read()</code>",
+              "<code>file.close()</code>",
+              "<code># Risky if an error occurs before close()</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 159,
+        title: "Exceptions in Python (4 Marks)",
+
+        description: "Exceptions are runtime errors that interrupt the normal flow of a program. If they are not handled properly, the program terminates abruptly.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "Exceptions occur during program execution (runtime errors).",
+              "They disrupt the normal flow of the program.",
+              "If an exception is not handled using mechanisms like <code>try-except</code>, the program crashes."
+            ]
+          },
+          {
+            heading: "Common Built-in Exceptions",
+            table: {
+              headers: ["Exception", "Trigger Cause", "Code Example"],
+              rows: [
+                [
+                  "ZeroDivisionError",
+                  "Occurs when a number is divided by zero.",
+                  "print(5 / 0)"
+                ],
+                [
+                  "IndexError",
+                  "Occurs when accessing an index outside the list range.",
+                  "lst = [1]; print(lst[5])"
+                ],
+                [
+                  "NameError",
+                  "Occurs when using a variable that has not been defined.",
+                  "print(undeclared_var)"
+                ],
+                [
+                  "ValueError",
+                  "Occurs when the correct data type is used but the value is inappropriate.",
+                  "int('Hello')"
+                ],
+                [
+                  "FileNotFoundError",
+                  "Occurs when trying to open a file that does not exist.",
+                  "open('missing.txt', 'r')"
+                ]
+              ]
+            }
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 160,
+        title: "Exception Handling Control Flow in Python (4 Marks)",
+
+        description: "Python uses try-except blocks to handle runtime errors and maintain normal program execution.",
+
+        sections: [
+          {
+            heading: "Exception Handling Blocks",
+            table: {
+              headers: ["Block", "Purpose"],
+              rows: [
+                [
+                  "try",
+                  "Contains the code that may raise an exception."
+                ],
+                [
+                  "except",
+                  "Executes if an exception occurs in the try block and handles the error."
+                ],
+                [
+                  "else",
+                  "Executes only when the try block runs successfully without any errors."
+                ],
+                [
+                  "finally",
+                  "Executes always, regardless of whether an exception occurred or not. Commonly used for cleanup tasks such as closing files."
+                ]
+              ]
+            }
+          },
+          {
+            heading: "Example Program",
+            points: [
+              "<code>try:</code>",
+              "<code>&nbsp;&nbsp;x = 10 / 2</code>",
+              "<code>except ZeroDivisionError:</code>",
+              "<code>&nbsp;&nbsp;print('Error: Divided by zero!')</code>",
+              "<code>else:</code>",
+              "<code>&nbsp;&nbsp;print('Success! Result is', x)</code>",
+              "<code>finally:</code>",
+              "<code>&nbsp;&nbsp;print('Execution complete.')</code>"
+            ]
+          },
+          {
+            heading: "Output",
+            points: [
+              "Success! Result is 5.0",
+              "Execution complete."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 161,
+        title: "Raising Exceptions in Python (4 Marks)",
+
+        description: "In Python, exceptions can be triggered manually using the raise and assert keywords.",
+
+        sections: [
+          {
+            heading: "1. raise Keyword",
+            points: [
+              "The <code>raise</code> keyword is used to explicitly throw an exception.",
+              "It is commonly used after checking a condition to indicate that an error has occurred.",
+              "<code>age = -5</code>",
+              "<code>if age &lt; 0:</code>",
+              "<code>&nbsp;&nbsp;raise ValueError('Age cannot be negative')</code>"
+            ]
+          },
+          {
+            heading: "2. assert Keyword",
+            points: [
+              "The <code>assert</code> statement is mainly used for debugging purposes.",
+              "It checks a condition and raises an <code>AssertionError</code> if the condition is False.",
+              "<b>Syntax:</b> <code>assert condition, 'Error Message'</code>",
+              "",
+              "<code>marks = 105</code>",
+              "<code>assert marks &lt;= 100, 'Marks cannot exceed 100'</code>"
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 162,
+        title: "Python Program Handling ZeroDivisionError (4 Marks)",
+
+        description: "Exception handling can be used to prevent a program from crashing when a division by zero occurs.",
+
+        sections: [
+          {
+            heading: "Python Program",
+            points: [
+              "<code>try:</code>",
+              "<code>&nbsp;&nbsp;num = int(input('Enter numerator: '))</code>",
+              "<code>&nbsp;&nbsp;den = int(input('Enter denominator: '))</code>",
+              "<code>&nbsp;&nbsp;result = num / den</code>",
+              "<code>except ZeroDivisionError:</code>",
+              "<code>&nbsp;&nbsp;print('Error: Cannot divide by zero!')</code>",
+              "<code>else:</code>",
+              "<code>&nbsp;&nbsp;print('Result:', result)</code>",
+              "<code>finally:</code>",
+              "<code>&nbsp;&nbsp;print('Execution Finished.')</code>"
+            ]
+          },
+          {
+            heading: "Case 1: Valid Input (10, 2)",
+            points: [
+              "Result: 5.0",
+              "Execution Finished."
+            ]
+          },
+          {
+            heading: "Case 2: Zero Input (10, 0)",
+            points: [
+              "Error: Cannot divide by zero!",
+              "Execution Finished."
+            ]
+          }
+        ],
+
+        notes: []
+      }, {
+        id: 163,
+        title: "The math Module in Python (4 Marks)",
+
+        description: "The math module is a built-in Python library that provides mathematical functions and constants such as pi and e.",
+
+        sections: [
+          {
+            heading: "Explanation",
+            points: [
+              "The <code>math</code> module contains functions used for advanced mathematical calculations.",
+              "It also provides constants like <code>pi</code> and <code>e</code>.",
+              "The module must be imported before using its functions."
+            ]
+          },
+          {
+            heading: "Common Functions",
+            points: [
+              "<code>import math</code>  # Importing the module",
+              "",
+              "<code># sqrt(): Returns the square root</code>",
+              "<code>print(math.sqrt(16))</code>  # Output: 4.0",
+              "",
+              "<code># ceil(): Rounds the number UP to the nearest integer</code>",
+              "<code>print(math.ceil(4.2))</code>  # Output: 5",
+              "",
+              "<code># floor(): Rounds the number DOWN to the nearest integer</code>",
+              "<code>print(math.floor(4.8))</code>  # Output: 4"
+            ]
+          }
+        ],
+
+        notes: []
+      },
     ];
 
 
@@ -2743,9 +5892,9 @@
         card.className = "card";
 
         let html = `
-      <h2>${index + 1}. ${q.title}</h2>
-      <p>${q.description || ""}</p>
-    `;
+          <h2>${index + 1}. ${q.title}</h2>
+          <p>${q.description || ""}</p>
+        `;
 
         if (q.sections) {
           q.sections.forEach(section => {
