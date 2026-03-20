@@ -2774,49 +2774,8 @@
         ],
 
         notes: []
-      }, {
-        question: "Difference between Mutable and Immutable Data Types (4 Marks)",
-
-        definition: "Mutable data types are objects whose values can be modified after creation, whereas immutable data types cannot be changed once created.",
-
-        comparison_table: [
-          {
-            basis: "Definition",
-            immutable: "Content cannot be changed after the object is created.",
-            mutable: "Content can be modified after the object is created."
-          },
-          {
-            basis: "In-place Modification",
-            immutable: "Not supported. Any change creates a new object.",
-            mutable: "Supported. Object can be modified directly."
-          },
-          {
-            basis: "Memory Behavior",
-            immutable: "Changing value creates a new object at a new memory address.",
-            mutable: "Changes occur at the same memory address."
-          },
-          {
-            basis: "Dictionary Keys",
-            immutable: "Can be used as dictionary keys because they are hashable.",
-            mutable: "Generally cannot be used as dictionary keys."
-          },
-          {
-            basis: "Examples",
-            immutable: "int, float, string, tuple",
-            mutable: "list, dictionary, set"
-          }
-        ],
-
-        example: `
-# Immutable Example
-t = (1, 2)
-t[0] = 5   # Raises TypeError
-
-# Mutable Example
-l = [1, 2]
-l[0] = 5   # Value changes successfully
-`
-      }, {
+      }, 
+      {
         id: 66,
         title: "Difference between Mutable and Immutable Data Types (4 Marks)",
 
